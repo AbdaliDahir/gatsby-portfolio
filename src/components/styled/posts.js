@@ -16,9 +16,16 @@ export const ArticlePost = styled.article`
   padding-bottom: 1rem;
   max-width: 60rem;
   margin: auto;
-  text-align: center;
+  text-align: left;
   img[src$="imgresponsive"] {
     max-width:80%;
+  }
+  table th {
+      background: #e5e5e5;
+  }
+  table th, table td {
+      border: 1px solid;
+      padding: 9px;
   }
 `
 export const SmallText = styled.small`
@@ -32,8 +39,8 @@ export const SmallText = styled.small`
 export const ArticleBody = styled.div `
   margin-top: 5rem;
   p {
-    font-size: 1.5rem;
-    font-family: "GT-Walsheim-Pro-Medium";
+    font-size: 1rem;
+    font-family: "GT-Walsheim-Pro-Regular";
   }
 `
 

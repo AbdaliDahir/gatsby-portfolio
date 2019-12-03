@@ -1,5 +1,5 @@
 ---
-title: Vuejs vs Nuxt.js vs Gridsome vs Vuepress: Comparison
+title: Vuejs vs Nuxt.js vs Gridsome vs Vuepress - Comparison
 date: "2019-11-06T23:46:37.121Z"
 image: './b77a3d5bbb3c4138f637152fc823caa2.webp'
 imageCredit: https://dribbble.com/shots/13970599-Ruuunnn

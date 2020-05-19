@@ -34,6 +34,20 @@ export const ArticlePost = styled.article`
       font-size: 1.1rem;
     }
   }
+  code {
+    background: #f1f1f1;
+    display: block;
+    padding: 14px;
+    font-size: 0.9rem;
+    color: #000;
+    border-bottom: 3px solid #e5e5e5;
+    border-radius: 5px;
+    hyphens: none;
+    line-height: 1.5;
+    overflow-x: auto;
+    padding: 1rem 2rem;
+    white-space: pre;
+  }
 `
 export const SmallText = styled.small`
     font-size: .89rem;

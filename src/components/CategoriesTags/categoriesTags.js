@@ -23,7 +23,7 @@ const CategoriesTags = () => {
       <div>
         {data.allMarkdownRemark.group.map(tag => (
           <Tag as={Link} key={tag.fieldValue} to={`/${kebabCase(tag.fieldValue)}/`} activeClassName="active">
-            <span>{tag.fieldValue} {tag.totalCount} </span>
+            <span>{tag.fieldValue} ({tag.totalCount}) </span>
           </Tag>
         ))}
       </div>

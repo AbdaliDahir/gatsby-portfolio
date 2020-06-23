@@ -1,0 +1,26 @@
+@import "functions";
+@import "variables";
+
+.navbar-list {
+  list-style: none;
+  > li  a {
+    font-size: 1.2rem;
+    color: #232323;
+    padding: 0 1.5rem;
+    text-decoration: none;
+    vertical-align: middle;
+    > svg {
+      width: 18px;
+      margin-right: 5px;
+    }
+    span, 
+    svg {
+      vertical-align: middle;
+    }
+    &:hover,
+    &.active {
+      font-weight: 700;
+      color: $primary;
+    }
+  }
+}

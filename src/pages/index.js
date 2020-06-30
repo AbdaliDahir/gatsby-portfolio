@@ -5,12 +5,12 @@ import SEO from "../components/seo"
 import "normalize.css"
 import "./../assets/scss/global.scss"
 
-import Header from "../components/header/header"
+import About from "../components/about/about"
 
 const IndexPage = () => (
   <Layout> 
     <SEO title="Home" />
-    <Header /> 
+    <About /> 
   </Layout>
 )
 

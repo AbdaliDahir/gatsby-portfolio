@@ -4,6 +4,10 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import "functions";
+@import "variables";
+
+$primary: #ff2d2d;
 
 html {
   box-sizing: border-box;
@@ -16,17 +20,26 @@ html {
   box-sizing: inherit;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
 
 body {
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
 }
 
+a {
+	text-decoration: none;
+}
 
-@import "functions";
-@import "variables";
-
+.text-dark{
+	color: $black;
+}
+.text-primary {
+	color: $primary;
+}
+.align-middle {
+	vertical-align: middle;
+}
 @import "mixins/breakpoints";
 @import "mixins/grid-framework";
 @import "mixins/grid";

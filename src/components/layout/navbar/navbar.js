@@ -1,27 +1,28 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import { User, Briefcase, MessageSquare, Feather } from 'react-feather'
+import { User, Briefcase, MessageSquare, Feather, Smile } from 'react-feather'
 
 import style from '../../../assets/scss/navbar.module.scss'
+import link from '../../../assets/scss/lined-link.scss'
 
 const Navbar = ({ siteTitle }) => (
   <div className="navbar">
     <header className="d-flex align-items-center justify-content-between">
       <div className="">
-        <h1>
+        <h3>
           <Link to="/">
-            {siteTitle}
+            <Smile className="align-middle"/> <span className={`${style.logo} align-middle`}> {siteTitle} </span>
           </Link>
-        </h1>
+        </h3>
       </div> 
       <div className="main-navigation">
         <nav>
           <ul className={`${style.navbarList} d-flex align-items-center`}>
-            <li><a href="/"> <User /> <span> About </span> </a></li> 
-            <li><a href="/work"> <Briefcase /> <span> Work </span> </a></li> 
-            <li><a href="/contact"> <MessageSquare /> <span> Contact </span> </a></li> 
-            <li><a href="/blog"> <Feather /> <span> Blog </span> </a></li>
+            <li><a href="/" className="lined-link active"> <User /> <span> About </span> </a></li> 
+            <li><a href="/work" className="lined-link"> <Briefcase /> <span> Work </span> </a></li> 
+            <li><a href="/contact" className="lined-link"> <MessageSquare /> <span> Contact </span> </a></li> 
+            <li><a href="/blog" className="lined-link"> <Feather /> <span> Blog </span> </a></li>
           </ul>
         </nav> 
       </div>

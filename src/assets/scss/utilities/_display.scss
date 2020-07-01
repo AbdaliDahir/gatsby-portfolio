@@ -13,17 +13,3 @@
     }
   }
 }
-<<<<<<< HEAD
-=======
-
-
-//
-// Utilities for toggling `display` in print
-//
-
-@media print {
-  @each $value in $displays {
-    .d-print-#{$value} { display: $value !important; }
-  }
-}
->>>>>>> 48e138f2d4bc40adcf9d5c0d67948f44dbe9089b

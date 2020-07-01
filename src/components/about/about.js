@@ -43,21 +43,14 @@ const Center = styled.div`
 
 const SocialLink = styled.a`
 	border-radius: 5px;
-    border: 3px solid ${colors.primary};
-    margin: 5px;
-    display: inline-block;
-    padding: 10px;
-    color: #b8b8b8;
-    cursor: pointer;
-    transition: background 400ms ease-in-out;
-    &:hover {
-		color: ${colors.inverse};
-		background: ${colors.primary};
-    }
-	> svg {
-		width: 20px;
-		height: 20px;
-	}
+  margin: 5px;
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 400ms ease-in-out;
+  &:hover {
+    color: ${colors.primary};
+  }
 `
 
 const About = () => {
@@ -83,7 +76,7 @@ const About = () => {
               <SubTitle> Front End Developer </SubTitle>
 
               <Center>
-              		<SocialLink target="_blank"> <Facebook /> </SocialLink>
+              	<SocialLink target="_blank"> <Facebook /> </SocialLink>
 	              <SocialLink target="_blank"> <Twitter /> </SocialLink>
 	              <SocialLink target="_blank"> <Instagram /> </SocialLink>
 	              <SocialLink target="_blank"> <Linkedin /> </SocialLink>

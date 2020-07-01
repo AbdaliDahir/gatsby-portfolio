@@ -4,13 +4,10 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-<<<<<<< HEAD
 @import "functions";
 @import "variables";
 
 $primary: #ff2d2d;
-=======
->>>>>>> 48e138f2d4bc40adcf9d5c0d67948f44dbe9089b
 
 html {
   box-sizing: border-box;
@@ -20,21 +17,16 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
-=======
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
->>>>>>> 48e138f2d4bc40adcf9d5c0d67948f44dbe9089b
 
 body {
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
 }
 
-<<<<<<< HEAD
 a {
 	text-decoration: none;
 }
@@ -48,12 +40,7 @@ a {
 .align-middle {
 	vertical-align: middle;
 }
-=======
 
-@import "functions";
-@import "variables";
-
->>>>>>> 48e138f2d4bc40adcf9d5c0d67948f44dbe9089b
 @import "mixins/breakpoints";
 @import "mixins/grid-framework";
 @import "mixins/grid";

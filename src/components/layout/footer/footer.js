@@ -18,9 +18,6 @@ const FooterStyle = styled.footer`
     }
 `;
 
-const LastFooter = styled.div`
-		text-align:center;
-`
 const SubRight = styled.h6`
 		font-size: 13px;
 		font-weight: 300;

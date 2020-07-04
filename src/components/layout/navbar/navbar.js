@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import { User, Briefcase, MessageSquare, Feather, Smile } from 'react-feather'
 
 import style from '../../../assets/scss/navbar.module.scss'
-import link from '../../../assets/scss/lined-link.scss'
+// import link from '../../../assets/scss/lined-link.scss'
 
 const Navbar = ({ siteTitle }) => (
   <div className="navbar">

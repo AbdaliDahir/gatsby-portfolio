@@ -1,13 +1,4 @@
-/*!
- * Bootstrap Grid v4.5.0 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-@import "functions";
 @import "variables";
-
-$primary: #ff2d2d;
 
 html {
   box-sizing: border-box;
@@ -31,7 +22,7 @@ a {
 	text-decoration: none;
 }
 
-.text-dark{
+.text-dark {
 	color: $black;
 }
 .text-primary {
@@ -41,11 +32,64 @@ a {
 	vertical-align: middle;
 }
 
-@import "mixins/breakpoints";
-@import "mixins/grid-framework";
-@import "mixins/grid";
+// typography
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 200;
+  line-height: 1.8;
+}
+
+.font-light {
+  font-weight: $font-weight-light;
+}
+
+.font-regular {
+  font-weight: $font-weight-regular;
+}
+
+.font-heavy {
+  font-weight: $font-weight-heavy;
+}
+
+// utility
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 @import "grid";
-@import "utilities/display";
-@import "utilities/flex";
-@import "utilities/spacing";

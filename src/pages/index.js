@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import "normalize.css"
 import "./../assets/scss/global.scss"
 
-import About from "../components/about/about"
+import About from "../components/about"
 
 const IndexPage = () => (
   <Layout> 

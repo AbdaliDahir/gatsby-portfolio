@@ -23,7 +23,8 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/assets/img`,
       },
-    },{
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [

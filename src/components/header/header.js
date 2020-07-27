@@ -6,7 +6,7 @@ const Header = () => {
     <>
       <div className="intro">
         <div className="container">
-          <div className="row">
+          <div className="row d-flex">
             <div className="col-lg-6">
               <img src={HeaderImg} alt="I’m John" className="fluid-img" />
             </div>

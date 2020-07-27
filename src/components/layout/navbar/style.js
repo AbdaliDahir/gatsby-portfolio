@@ -1,6 +1,3 @@
-@import "functions";
-@import "variables";
-
 .logo {
   padding-left: 10px;
 }

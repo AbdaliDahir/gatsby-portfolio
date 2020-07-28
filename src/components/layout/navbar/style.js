@@ -1,9 +1,22 @@
-.logo {
-  padding-left: 10px;
-}
-.navbar-list {
+import styled from "styled-components";
+
+export const NavbarLogo = styled.div`
+  .logo {
+    padding-left: 10px;
+  }
+`
+
+export const NavbarElement = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`
+
+export const NavbarList = styled.ul`
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   list-style: none;
-  > li  a {
+  > li a {
     font-size: 1.2rem;
     color: #232323;
     padding: .5rem .2rem;
@@ -16,7 +29,9 @@
     }
     span, 
     svg {
+      display: block;
       vertical-align: middle;
     }
   }
-}
+`
+

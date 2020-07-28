@@ -8,10 +8,8 @@ export const Intro = styled.div`
 
 export const AboutSection = styled.section`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(6, 200px);
-  grid-gap: 1rem;
-  grid-auto-flow: dense;
+  grid-template-columns: 1fr 1.25fr;
+  grid-gap: 10rem;
 `
 
 export const Avatar =styled(Img)`

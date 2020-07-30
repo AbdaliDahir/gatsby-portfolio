@@ -1,7 +1,7 @@
 ---
-title: My Second Post!
+title: How To Increase Reviews & Ratings For Your Company
 date: "2015-05-06T23:46:37.121Z"
-time: "12 mins"
+time: 12
 description: "hello world"
 ---
 

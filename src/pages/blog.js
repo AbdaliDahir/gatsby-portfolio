@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout/layout"
+import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 import { Calendar, Clock } from 'react-feather'
@@ -11,12 +11,13 @@ import styled from 'styled-components';
 
 const Intro = styled.div`
   padding: 8rem 0 4rem 0;
+  font-family: "GT-Walsheim-Pro-Regular";
 `;
 
 const Title = styled.h1`
+  font-family: "GT-Walsheim-Pro-Bold";
   font-size: 2rem;
   text-transform: capitalize;
-  font-weight: 600;
 `
 const Text = styled.p`
   font-size: .98rem;
@@ -36,22 +37,22 @@ const HeaderIntro = styled.header`
 const SubTitle = styled.h3`
   font-size: 2rem;
   text-transform: capitalize;
-  font-weight: bold;
+  font-family: "GT-Walsheim-Pro-Bold";
   text-decoration: underline;
 `
 const ArticlePost = styled.article`
   margin-bottom: 5rem;
   padding-bottom: 1rem;
-  &:not(:last-child) {
-    border-bottom: 4px solid #000;
-  }
 `
 const SmallText = styled.small`
-    font-size: .89rem;
-    padding-right: 10px;
-    > span {
-      padding-left: 5px;
-    }
+  font-size: .89rem;
+  padding-right: 10px;
+  > span {
+    padding-left: 5px;
+  }
+`
+const PageLAyout = styled.div`
+  max-width: 60rem;
 `
 
 const BlogIndex = ({ data }) => {
@@ -74,8 +75,7 @@ const BlogIndex = ({ data }) => {
               </SubText>
             </HeaderIntro>
 
-            <div className="row">
-              <div className="col-8">
+            <PageLAyout>
                 {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
@@ -105,8 +105,7 @@ const BlogIndex = ({ data }) => {
                   </ArticlePost>
                 )
               })}
-              </div>
-            </div>
+            </PageLAyout>
           </div>
         </Intro>
       </Layout>

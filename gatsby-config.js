@@ -18,6 +18,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        token: data.githubApiToken,
+        graphQLQuery: data.githubApiQuery,
+        variables: data.githubApiVariables,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

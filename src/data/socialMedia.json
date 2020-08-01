@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "name": "github",
+    "url": "https://github.com/AbdaliDahir"
+  },
+  {
+    "id": 1,
+    "name": "linkedin",
+    "url": "linkedin.com"
+  },
+  {
+    "id": 2,
+    "name": "twitter",
+    "url": "twitter.com"
+  },
+  {
+    "id": 3,
+    "name": "instagram",
+    "url": "instagram.com"
+  }
+]

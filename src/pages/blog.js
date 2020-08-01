@@ -4,56 +4,8 @@ import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 import { Calendar, Clock } from 'react-feather'
 
-import "normalize.css"
 import "./../assets/scss/global.scss"
-
-import styled from 'styled-components';
-
-const Intro = styled.div`
-  padding: 8rem 0 4rem 0;
-  font-family: "GT-Walsheim-Pro-Regular";
-`;
-
-const Title = styled.h1`
-  font-family: "GT-Walsheim-Pro-Bold";
-  font-size: 2rem;
-  text-transform: capitalize;
-`
-const Text = styled.p`
-  font-size: .98rem;
-  line-height: 2;
-  color: #000000;
-  margin-top: 2rem;
-`
-const SubText = styled.p`
-  font-size: 1rem;
-  line-height: 2;
-  color: #232323;
-`
-const HeaderIntro = styled.header`
-    margin-bottom: 6rem;
-    max-width: 800px;
-`
-const SubTitle = styled.h3`
-  font-size: 2rem;
-  text-transform: capitalize;
-  font-family: "GT-Walsheim-Pro-Bold";
-  text-decoration: underline;
-`
-const ArticlePost = styled.article`
-  margin-bottom: 5rem;
-  padding-bottom: 1rem;
-`
-const SmallText = styled.small`
-  font-size: .89rem;
-  padding-right: 10px;
-  > span {
-    padding-left: 5px;
-  }
-`
-const PageLAyout = styled.div`
-  max-width: 60rem;
-`
+import {Intro, HeaderIntro, SubTitle, SubText, PageLAyout, ArticlePost, Title, Text, SmallText} from "../components/styled/blog"
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
@@ -113,9 +65,7 @@ const BlogIndex = ({ data }) => {
   )
 }
 
-
 export default BlogIndex
-
 
 export const pageQuery = graphql`
   query {

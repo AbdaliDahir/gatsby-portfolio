@@ -1,6 +1,6 @@
 module.exports = {
   SiteTitle: 'Limbo',
-  Sitelogo: 'https://portfolio.smakosh.com/favicon/favicon-512.png',
+  Sitelogo: '#',
   SiteLogoText: 'John Doe',
   SiteAuthor: 'John Doe',
   SiteDescription: 'I’m John and I’m a Backend & Devops engineer!',

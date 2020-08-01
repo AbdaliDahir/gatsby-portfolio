@@ -4,12 +4,11 @@ import SEO from "./../components/seo"
 
 import "./../assets/scss/global.scss"
 
-import About from "../components/about"
-const IndexPage = () => (
+const WorksPage = () => (
   <Layout> 
     <SEO title="Home" />
-    <About /> 
+    <h1> Comming Soon </h1>
   </Layout>
 )
 
-export default IndexPage
+export default WorksPage

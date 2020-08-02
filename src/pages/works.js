@@ -6,7 +6,7 @@ import { graphql } from "gatsby"
 import "./../assets/scss/global.scss"
 
 const WorksPage = ({data}) => {
-
+  console.log(data);
   const {
     name,
     avatarUrl,
@@ -17,9 +17,7 @@ const WorksPage = ({data}) => {
   return (
     <Layout> 
       <SEO title="Home" />
-      {repositories.nodes
-            .map(repo => <Repository key={repo.name} repo={repo} />)
-            .reverse()}
+      {repositories.nodes.map(repo => <Repository key={repo.name} repo={repo} />).reverse()}
     </Layout>
   )
 }

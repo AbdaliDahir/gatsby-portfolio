@@ -1,6 +1,7 @@
 import React from "react"
 // import Octicon, { Law, Star } from "@githubprimer/octicons-react"
 import GitHubButton from "react-github-btn"
+import { Star, Key } from "react-feather"
 
 const RepositoryHeader = ({ repo }) => {
   return (
@@ -15,22 +16,22 @@ const RepositoryHeader = ({ repo }) => {
           fontSize: 20,
         }}
       >
-        {/* <a
+        <a
           href={`https://github.com${repo.resourcePath}`}
           target="_blank"
           rel="noopener noreferrer"
         >
           {repo.name}
-        </a> */}
+        </a>
       </h3>
-      {/* <GitHubButton
+      <GitHubButton
         href={`https://github.com${repo.resourcePath}`}
         data-icon=""
         data-size="large"
         aria-label="Star repo on GitHub"
       >
         Star
-      </GitHubButton> */}
+      </GitHubButton>
     </div>
   )
 }
@@ -40,7 +41,14 @@ const FooterItem = ({ children }) => (
 )
 
 const RepositoryFooter = ({ repo }) => {
-  const language = repo.languages.edges[0].node
+  // if(repo.languages.edges[0]) {
+  //   const language = repo.languages.edges[0].node
+  // } else {
+  //   const language = { 
+  //       "name": "CSS",
+  //       "color": "#563d7c" 
+  //   }
+  // }
   const timeAgo = new Date(repo.updatedA) - new Date()
   const daysAgo = Math.floor(timeAgo / (1000 * 60 * 60 * 24)) // ms to days
   let updatedAt = repo.updatedAt.slice(0, 10)
@@ -62,18 +70,17 @@ const RepositoryFooter = ({ repo }) => {
             position: `relative`,
             top: 1,
             width: 12,
-            backgroundColor: language.color,
           }}
         />{" "}
-        {language.name}
+        {/* {language.name} */}
       </FooterItem>
       <FooterItem>
-        {/* <Octicon icon={Star} /> */}
+        <Star />
         {repo.stargazers.totalCount}{" "}
       </FooterItem>
       {repo.licenseInfo && (
         <FooterItem>
-          {/* <Octicon icon={Law} /> */} {repo.licenseInfo.name}
+          <Key /> {repo.licenseInfo.name}
         </FooterItem>
       )}
       <FooterItem>Updated: {updatedAt}</FooterItem>

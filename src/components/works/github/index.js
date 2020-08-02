@@ -1,21 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 // import Octicon, { Law, Star } from "@githubprimer/octicons-react"
 import GitHubButton from "react-github-btn"
 import { Star, Key } from "react-feather"
+import {RepoContent, RepoHead, Title, Text, FooterItem, Circle} from "../../styled/repository"
 
 const RepositoryHeader = ({ repo }) => {
   return (
-    <div
-      style={{ display: `flex`, justifyContent: `space-between`, fontSize: 14 }}
-    >
-      <h3
-        style={{
-          display: `flex`,
-          justifyContent: `space-between`,
-          marginBottom: 0,
-          fontSize: 20,
-        }}
-      >
+    <RepoHead>
+      <Title>
         <a
           href={`https://github.com${repo.resourcePath}`}
           target="_blank"
@@ -23,32 +15,22 @@ const RepositoryHeader = ({ repo }) => {
         >
           {repo.name}
         </a>
-      </h3>
+      </Title>
       <GitHubButton
         href={`https://github.com${repo.resourcePath}`}
-        data-icon=""
+        data-icon={Star}
         data-size="large"
         aria-label="Star repo on GitHub"
       >
         Star
       </GitHubButton>
-    </div>
+    </RepoHead>
   )
 }
 
-const FooterItem = ({ children }) => (
-  <span style={{ marginRight: 16 }}>{children}</span>
-)
-
 const RepositoryFooter = ({ repo }) => {
-  // if(repo.languages.edges[0]) {
-  //   const language = repo.languages.edges[0].node
-  // } else {
-  //   const language = { 
-  //       "name": "CSS",
-  //       "color": "#563d7c" 
-  //   }
-  // }
+
+  const language = repo.languages.edges[0];
   const timeAgo = new Date(repo.updatedA) - new Date()
   const daysAgo = Math.floor(timeAgo / (1000 * 60 * 60 * 24)) // ms to days
   let updatedAt = repo.updatedAt.slice(0, 10)
@@ -62,25 +44,21 @@ const RepositoryFooter = ({ repo }) => {
   return (
     <div style={{ color: `#586069`, fontSize: 12 }}>
       <FooterItem>
-        <span
+        <Circle
           style={{
-            borderRadius: `50%`,
-            display: `inline-block`,
-            height: 12,
-            position: `relative`,
-            top: 1,
-            width: 12,
+            backgroundColor: language ? language.node.color : '#000'
           }}
         />{" "}
-        {/* {language.name} */}
+        {language ? language.node.name : 'undifined'}
       </FooterItem>
       <FooterItem>
-        <Star />
-        {repo.stargazers.totalCount}{" "}
+        <Star className="star" />
+        <span> {repo.stargazers.totalCount}{" "} </span>
       </FooterItem>
       {repo.licenseInfo && (
         <FooterItem>
-          <Key /> {repo.licenseInfo.name}
+          <Key /> 
+          <span> {repo.licenseInfo.name} </span>
         </FooterItem>
       )}
       <FooterItem>Updated: {updatedAt}</FooterItem>
@@ -90,33 +68,26 @@ const RepositoryFooter = ({ repo }) => {
 }
 
 const RepositoryDescription = ({ repo }) => (
-  <div style={{ width: `75%` }}>
-    <p style={{ color: `#586069`, marginBottom: 0 }}>
-      {repo.description}
+  <div>
+    <Text>
+      {repo.description || "this repo didn't have any description"}
 
       {repo.homepageUrl && (
         <>
           {" -"} <a href={repo.homepageUrl}>{repo.homepageUrl}</a>
         </>
       )}
-    </p>
+    </Text>
   </div>
 )
 
 const Repository = ({ repo }) => {
   return (
-    <div
-      style={{
-        borderBottom: `1px solid #e1e4e8`,
-        marginBottom: `1rem`,
-        padding: `1rem`,
-        fontSize: 16,
-      }}
-    >
+    <RepoContent>
       <RepositoryHeader repo={repo} />
       <RepositoryDescription repo={repo} />
       <RepositoryFooter repo={repo} />
-    </div>
+    </RepoContent>
   )
 }
 

@@ -2,10 +2,6 @@ import Img from "gatsby-image"
 import styled from 'styled-components';
 import colors from '../../data/colors.js';
 
-export const Intro = styled.div`
-      padding: 8rem 0 4rem 0;
-`
-
 export const AboutSection = styled.section`
   display: grid;
   grid-template-columns: 1fr 1.25fr;
@@ -20,17 +16,17 @@ export const Avatar =styled(Img)`
 export const Title = styled.h1`
   font-size: 3rem;
   text-transform: capitalize;
-  font-weight: 600;
+  font-family: "GT-Walsheim-Pro-Bold";
 `
 export const Text = styled.p`
   font-size: 1.2rem;
-    line-height: 2;
-    color: #9a9797;
-    text-transform: capitalize;
-    a {
-      color: #3F51B5;
-      text-decoration: underline;
-    }
+  line-height: 2;
+  color: #232323;
+  text-transform: capitalize;
+  a {
+    color: #3F51B5;
+    text-decoration: underline;
+  }
 `
 export const SubTitle = styled.h2`
     font-size: 1.8rem;

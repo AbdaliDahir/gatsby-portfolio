@@ -4,9 +4,10 @@ import SEO from "./../components/seo"
 import Repository from "./../components/works/github"
 import { graphql } from "gatsby"
 import "./../assets/scss/global.scss"
+import {RepoGrid, RepoInfo} from "../components/styled/repository"
+import SectionIntro from "../components/common/section";
 
-const WorksPage = ({data}) => {
-  console.log(data);
+const WorksPage = ({data}) => { 
   const {
     name,
     avatarUrl,
@@ -17,7 +18,17 @@ const WorksPage = ({data}) => {
   return (
     <Layout> 
       <SEO title="Home" />
-      {repositories.nodes.map(repo => <Repository key={repo.name} repo={repo} />).reverse()}
+      <div className="container">
+        <SectionIntro>
+          <RepoInfo>
+            <img src={avatarUrl} alt="repo Avatar" />
+            <h4>{name}</h4>
+          </RepoInfo>
+          <RepoGrid>
+            {repositories.nodes.map(repo => <Repository key={repo.name} repo={repo} />).reverse()}
+          </RepoGrid>
+        </SectionIntro>
+      </div>
     </Layout>
   )
 }

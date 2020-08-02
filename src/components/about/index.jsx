@@ -1,7 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Facebook, Twitter, Instagram, Linkedin } from 'react-feather'
-import {Intro, AboutSection, Avatar, Title, Text, SubTitle, SocialLink} from './style';
+import {AboutSection, Avatar, Title, Text, SubTitle, SocialLink} from './style';
+import SectionIntro from "../common/section";
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -18,7 +19,7 @@ const About = () => {
 
   return (
     <>
-      <Intro>
+      <SectionIntro>
         <div className="container">
           <AboutSection>
             <div>
@@ -40,7 +41,7 @@ const About = () => {
             </div>
           </AboutSection>
         </div>
-      </Intro>
+      </SectionIntro>
     </>
   )
 }

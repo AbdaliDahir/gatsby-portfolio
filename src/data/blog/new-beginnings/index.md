@@ -2,6 +2,8 @@
 title: New Beginnings
 date: "2015-05-28T22:40:32.169Z"
 time: 20
+categories: ['Blog', 'css']
+image: './blog-image.jpg'
 description: "Radio buttons and checkboxes have long been components that cause users confusion. These components are often used in the same context, but look completely different. Designers and developers know the difference, but that’s because they learned it through their work. What about users who were never taught the difference?"
 ---
 

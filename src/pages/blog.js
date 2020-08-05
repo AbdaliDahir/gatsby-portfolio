@@ -2,8 +2,8 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
-import { Calendar, Clock } from 'react-feather'
-
+import { Calendar, Clock, Tag } from 'react-feather'
+import Img from "gatsby-image"
 import "./../assets/scss/global.scss"
 import {Intro, HeaderIntro, SubTitle, SubText, PageLAyout, ArticlePost, Title, Text, SmallText} from "../components/styled/blog"
 
@@ -32,6 +32,7 @@ const BlogIndex = ({ data }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
                   <ArticlePost key={node.fields.slug}>
+                    <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
                     <header>
                       <Title>
                         <Link className="text-primary" style={{ boxShadow: `none` }} to={node.fields.slug}>
@@ -45,6 +46,15 @@ const BlogIndex = ({ data }) => {
                       <SmallText> 
                         <Clock className="align-middle text-primary" width="18" height="18" /> 
                         <span className="align-middle"> read time : {node.frontmatter.time} </span>
+                      </SmallText>
+                      <SmallText> 
+                        <Tag className="align-middle text-primary" width="18" height="18" /> 
+                        <span className="align-middle"> Categories : {node.frontmatter.categories.map((item, index) => (
+                          <span key={index}>
+                            <span className="align-middle text-primary text-underline">#{item}</span>
+                            {node.frontmatter.categories.length != index + 1 ? <span className="align-middle text-primary"> , </span> : ""}
+                          </span>
+                        ))} </span>
                       </SmallText>
                     </header>
                     <section>
@@ -85,6 +95,14 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             time
             title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            categories
             description
           }
         }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import colors from '../../data/colors';
 
 export const RepoGrid = styled.div`
   display: grid;
@@ -26,6 +27,13 @@ export const RepoContent = styled.div`
   margin-bottom: 2rem;
   padding: 1rem;
   font-size: 16;
+  transition: all 200ms ease-in-out;
+  &:hover {
+    box-shadow: 0px 0px 36px 25px rgb(0 0 0 / 3%);
+    h2 a {
+      color: ${colors.primary};
+    }
+  }
 `
 export const Title = styled.h2`
   margin-bottom: 0;

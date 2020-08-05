@@ -3,6 +3,7 @@ import Layout from "./../components/layout"
 import SEO from "./../components/seo"
 import Repository from "./../components/works/github"
 import { graphql } from "gatsby"
+
 import "./../assets/scss/global.scss"
 import {RepoGrid, RepoInfo} from "../components/styled/repository"
 import SectionIntro from "../components/common/section";
@@ -11,7 +12,6 @@ const WorksPage = ({data}) => {
   const {
     name,
     avatarUrl,
-    isHireable,
     repositories,
   } = data.githubData.data.viewer
 
@@ -41,7 +41,6 @@ export const gitHubQuery = graphql`
         viewer {
           name
           avatarUrl
-          isHireable
           repositories {
             nodes {
               name

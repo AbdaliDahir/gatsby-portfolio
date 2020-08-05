@@ -12,7 +12,7 @@ const Footer = () => {
 					<FooterBody>
 						<div>
 							{socialMedia.map(({ id, name, url }) => (
-								<p> <MediaLink className="lined-link" key={id} href={url} target="_blank" rel="noopener noreferrer" aria-label={`follow us on ${name}`}>
+								<p key={id}> <MediaLink className="lined-link" href={url} target="_blank" rel="noopener noreferrer" aria-label={`follow us on ${name}`}>
 									{name}
 								</MediaLink> </p>
 							))}
@@ -24,7 +24,12 @@ const Footer = () => {
 					</FooterBody>
 					<div className="box">
 						<SubRight> Good design doesn't date. Bad design does. </SubRight>
-						<CopyRight className="text-dark"> © Copyright 2020 by Abdelali Dahir </CopyRight>
+						<CopyRight className="text-dark">
+							© 
+							<span> {new Date().getFullYear()}, Built with {` `} 
+								<a href="https://www.gatsbyjs.org">Gatsby</a>{" "}
+          		</span> 
+							Copyright 2020 by Abdelali Dahir </CopyRight>
 					</div>
 				</div>
 			</FooterStyle>

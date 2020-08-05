@@ -2,6 +2,8 @@
 title: How To Increase Reviews & Ratings For Your Company
 date: "2015-05-06T23:46:37.121Z"
 time: 12
+categories: ['Blog', 'css']
+image: './blog-image.jpg'
 description: "Not only that, but the second address field also caused them to split their input incorrectly in the address fields. This led to confusion and frustration among users.
 
 Labeling the second address field “Apartment/Suite/Other” did not resolve the issue. Users still came to a confusing stop and wondered whether the field was relevant for them."  

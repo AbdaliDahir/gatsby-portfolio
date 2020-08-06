@@ -1,6 +1,6 @@
 import Img from "gatsby-image"
 import styled from 'styled-components';
-import colors from '../../data/colors.js';
+import colors from '../../data/variables';
 
 export const AboutSection = styled.section`
   display: grid;

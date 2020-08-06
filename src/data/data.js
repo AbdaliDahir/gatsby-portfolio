@@ -5,7 +5,7 @@ module.exports = {
   SiteAuthor: 'John Doe',
   SiteDescription: 'Front End Developer',
   // githubApiToken: process.env.GITHUB_API_TOKEN,
-  githubApiToken: '7a0aa167ad084b88cc2da0c02486587c7fb647cf',
+  githubApiToken: '',
   githubApiQuery: `query ($number_of_repos: Int!) {
     viewer {
       name

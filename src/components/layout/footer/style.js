@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colors from '../../../data/colors.js';
+import colors from '../../../data/variables';
 
 export const FooterStyle = styled.footer`
 	background: linear-gradient(to top, #efe9e9, transparent 50%);

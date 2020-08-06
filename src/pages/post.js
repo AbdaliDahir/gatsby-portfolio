@@ -6,6 +6,8 @@ import { Calendar, Clock } from 'react-feather'
 
 import "./../assets/scss/global.scss"
 import {Intro, Title, ArticlePost, SmallText, ArticleBody, NaviagtionList, NaviagtionLi } from '../components/styled/posts'
+import {ContainerLayout} from '../components/common'
+
 
 const BlogPost = ({data, pageContext, location}) => {
   const post = data.markdownRemark
@@ -19,8 +21,7 @@ const BlogPost = ({data, pageContext, location}) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <Intro >
-        <div className="container">
-          <div>
+        <ContainerLayout> 
             <div>
               <ArticlePost>
                 <header>
@@ -59,8 +60,8 @@ const BlogPost = ({data, pageContext, location}) => {
                 </NaviagtionList>
               </nav>
             </div>
-          </div>
-        </div>
+          
+        </ContainerLayout>
       </Intro>
     </Layout>
   )

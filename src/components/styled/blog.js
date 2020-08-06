@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colors from '../../data/colors';
+import colors from '../../data/variables';
 
 export const Intro = styled.div`
   padding: 8rem 0 4rem 0;
@@ -51,7 +51,4 @@ export const SmallText = styled.small`
   > span {
     padding-left: 5px;
   }
-`
-export const PageLAyout = styled.div`
-  max-width: 50rem;
 `

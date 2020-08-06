@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import colors from '../../data/colors';
+import colors from '../../data/variables';
 
 export const RepoGrid = styled.div`
   display: grid;

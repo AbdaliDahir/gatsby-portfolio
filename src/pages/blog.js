@@ -5,7 +5,8 @@ import { Link, graphql } from "gatsby"
 import { Calendar, Clock, Tag } from 'react-feather'
 import Img from "gatsby-image"
 import "./../assets/scss/global.scss"
-import {Intro, HeaderIntro, SubTitle, SubText, PageLAyout, ArticlePost, Title, Text, SmallText} from "../components/styled/blog"
+import {Intro, HeaderIntro, SubTitle, SubText, ArticlePost, Title, Text, SmallText} from "../components/styled/blog"
+import {ContainerLayout} from "../components/common"
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
@@ -15,7 +16,7 @@ const BlogIndex = ({ data }) => {
       <Layout> 
         <SEO title="Home" />
         <Intro>
-          <div className="container">
+          <ContainerLayout>
 
             {/* Header  */}
             <HeaderIntro>
@@ -27,7 +28,7 @@ const BlogIndex = ({ data }) => {
               </SubText>
             </HeaderIntro>
 
-            <PageLAyout>
+            <ContainerLayout className="wrapper">
                 {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
@@ -67,8 +68,8 @@ const BlogIndex = ({ data }) => {
                   </ArticlePost>
                 )
               })}
-            </PageLAyout>
-          </div>
+            </ContainerLayout>
+          </ContainerLayout>
         </Intro>
       </Layout>
     </>

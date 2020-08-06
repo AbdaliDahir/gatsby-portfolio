@@ -1,70 +1,95 @@
 import React from "react"
-import Layout from "./../components/layout"
-import SEO from "./../components/seo"
-import Repository from "./../components/works/github"
-import { graphql } from "gatsby"
-
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 import "./../assets/scss/global.scss"
-import {RepoGrid, RepoInfo} from "../components/styled/repository"
-import SectionIntro from "../components/common/section";
+import {Intro, SubTitle, Title, Text} from "../components/styled/blog"
+import {WorkPost, Category} from "../components/styled/works"
+import {Tag, ContainerLayout} from "../components/common"
 
-const WorksPage = ({data}) => { 
-  const {
-    name,
-    avatarUrl,
-    repositories,
-  } = data.githubData.data.viewer
+const WorkIndex = ({ data }) => {
+  const works = data.allMarkdownRemark.edges
 
   return (
-    <Layout> 
-      <SEO title="Home" />
-      <div className="container">
-        <SectionIntro>
-          <RepoInfo>
-            <img src={avatarUrl} alt="repo Avatar" />
-            <h4>{name}</h4>
-          </RepoInfo>
-          <RepoGrid>
-            {repositories.nodes.map(repo => <Repository key={repo.name} repo={repo} />).reverse()}
-          </RepoGrid>
-        </SectionIntro>
-      </div>
-    </Layout>
+    <>
+      <Layout> 
+        <SEO title="Home" />
+        <Intro>
+          <ContainerLayout>
+
+            <SubTitle className="text-dark">
+              Selected Work
+            </SubTitle>
+
+            <ContainerLayout className="wrapper">
+              {works.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+                return (
+                  <WorkPost key={node.fields.slug}>
+                    <div className="image-wrapper">
+                      <Link to={node.fields.slug}>
+                        <Img fluid={node.frontmatter.image.childImageSharp.fluid} title="work title" />
+                      </Link>
+                    </div>
+                    <section>
+                      <header>
+                        <Category>{node.frontmatter.category}</Category>
+                        <Title>
+                          <Link className="text-primary lined-link" style={{ boxShadow: `none` }} to={node.fields.slug}>
+                            {title}
+                          </Link>
+                        </Title>
+                      </header>
+                        <Text
+                          dangerouslySetInnerHTML={{
+                            __html: node.frontmatter.description || node.excerpt,
+                          }}
+                        />
+                        <div>
+                          {node.frontmatter.tags.map((tag, index) => (<Tag key={index}>{tag}</Tag>))}
+                        </div>
+                    </section>
+                  </WorkPost>
+                )
+              })}
+            </ContainerLayout>
+          </ContainerLayout>
+        </Intro>
+      </Layout>
+    </>
   )
 }
-export default WorksPage
 
-export const gitHubQuery = graphql`
-  {
-    githubData {
-      data {
-        viewer {
-          name
-          avatarUrl
-          repositories {
-            nodes {
-              name
-              description
-              homepageUrl
-              resourcePath
-              forkCount
-              createdAt
-              updatedAt
-              languages {
-                edges {
-                  node {
-                    name
-                    color
-                  }
+export default WorkIndex
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(works)/"}}, sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
                 }
               }
-              licenseInfo {
-                name
-              }
-              stargazers {
-                totalCount
-              }
             }
+            tags
+            category
+            description
           }
         }
       }

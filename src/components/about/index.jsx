@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Facebook, Twitter, Instagram, Linkedin } from 'react-feather'
 import {AboutSection, Avatar, Title, Text, SubTitle, SocialLink} from './style';
-import SectionIntro from "../common/section";
+import {SectionIntro, ContainerLayout} from "../common";
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -20,7 +20,7 @@ const About = () => {
   return (
     <>
       <SectionIntro>
-        <div className="container">
+        <ContainerLayout>
           <AboutSection>
             <div>
               <Avatar fluid={data.placeholderImage.childImageSharp.fluid} alt="user photo" />
@@ -40,7 +40,7 @@ const About = () => {
               </Text>
             </div>
           </AboutSection>
-        </div>
+        </ContainerLayout>
       </SectionIntro>
     </>
   )

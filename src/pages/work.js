@@ -1,16 +1,17 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Calendar, Clock } from 'react-feather'
+import { Calendar } from 'react-feather'
 
 import "./../assets/scss/global.scss"
-import {Intro, Title, ArticlePost, SmallText, ArticleBody, NaviagtionList, NaviagtionLi } from '../components/styled/posts'
+import {Intro, Title, ArticlePost, SmallText, ArticleBody} from '../components/styled/posts'
+import {ContainerLayout} from '../components/common'
+
 
 const portfolioWork = ({data, pageContext, location}) => {
   const work = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -19,25 +20,23 @@ const portfolioWork = ({data, pageContext, location}) => {
         description={work.frontmatter.description || work.excerpt}
       />
       <Intro >
-        <div className="container">
+        <ContainerLayout>
           <div>
-            <div>
-              <ArticlePost>
-                <header>
-                  <Title>
-                    {work.frontmatter.title}
-                  </Title>
-                  <SmallText> 
-                    <Calendar className="align-middle text-primary" width="18" height="18" /> 
-                    <span className="align-middle"> date published : {work.frontmatter.date} </span>
-                  </SmallText>
-                </header>
-                
-                <ArticleBody dangerouslySetInnerHTML={{ __html: work.html }} />
-              </ArticlePost>
-            </div>
+            <ArticlePost>
+              <header>
+                <Title>
+                  {work.frontmatter.title}
+                </Title>
+                <SmallText> 
+                  <Calendar className="align-middle text-primary" width="18" height="18" /> 
+                  <span className="align-middle"> date published : {work.frontmatter.date} </span>
+                </SmallText>
+              </header>
+              
+              <ArticleBody dangerouslySetInnerHTML={{ __html: work.html }} />
+            </ArticlePost>
           </div>
-        </div>
+        </ContainerLayout>
       </Intro>
     </Layout>
   )

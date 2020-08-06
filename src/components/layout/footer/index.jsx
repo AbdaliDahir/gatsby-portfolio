@@ -1,14 +1,14 @@
 import React from 'react';
-import ButtonDefault from '../../common/buttons/button';
 import socialMedia from "../../../data/socialMedia.json";
 
 import { FooterStyle, FooterBody, SubRight, CopyRight, MediaLink } from './style'
+import {ContainerLayout, ButtonDefault} from '../../common'
 
 const Footer = () => {
 	return (
 		<>
 			<FooterStyle>
-				<div className="container">
+				<ContainerLayout>
 					<FooterBody>
 						<div>
 							{socialMedia.map(({ id, name, url }) => (
@@ -31,7 +31,7 @@ const Footer = () => {
           		</span> 
 							Copyright 2020 by Abdelali Dahir </CopyRight>
 					</div>
-				</div>
+				</ContainerLayout>
 			</FooterStyle>
 		</>
 	)

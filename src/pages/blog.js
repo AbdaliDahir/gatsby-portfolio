@@ -52,7 +52,7 @@ const BlogIndex = ({ data }) => {
                         <span className="align-middle"> Categories : {node.frontmatter.categories.map((item, index) => (
                           <span key={index}>
                             <span className="align-middle text-primary text-underline">#{item}</span>
-                            {node.frontmatter.categories.length != index + 1 ? <span className="align-middle text-primary"> , </span> : ""}
+                            {node.frontmatter.categories.length !== index + 1 ? <span className="align-middle text-primary"> , </span> : ""}
                           </span>
                         ))} </span>
                       </SmallText>
@@ -84,7 +84,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(blog)/"}}, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt
@@ -97,7 +97,7 @@ export const pageQuery = graphql`
             title
             image {
               childImageSharp {
-                fluid(maxWidth: 600) {
+                fluid(maxWidth: 600, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }

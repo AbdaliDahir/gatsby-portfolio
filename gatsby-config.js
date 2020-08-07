@@ -71,7 +71,15 @@ module.exports = {
         background_color: `#000`,
         theme_color: `#000`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/img/portfolio-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    // https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+          trackingId: "UA-174902481-1",
+          head: true,
       },
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality

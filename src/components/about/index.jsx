@@ -25,7 +25,7 @@ const About = () => {
           <AboutSection>
             <div>
               <Avatar fluid={data.placeholderImage.childImageSharp.fluid} alt="user photo" />
-              <SubTitle> Front End Developer </SubTitle>
+              <SubTitle> Front End Developer</SubTitle>
               <div className="center">
                 <div>
                   {socialMedia.map(({ id, name, url }) => (

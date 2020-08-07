@@ -1,11 +1,14 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
-  SiteTitle: 'Limbo',
+  SiteTitle: 'Abdelali',
   Sitelogo: '#',
-  SiteLogoText: 'John Doe',
-  SiteAuthor: 'John Doe',
+  SiteLogoText: 'Abdelali',
+  SiteAuthor: 'Abdelali Dahir',
   SiteDescription: 'Front End Developer',
-  // githubApiToken: process.env.GITHUB_API_TOKEN,
-  githubApiToken: '',
+  githubApiToken: process.env.GATSBY_GITHUB_API_TOKEN,
   githubApiQuery: `query ($number_of_repos: Int!) {
     viewer {
       name

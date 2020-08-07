@@ -6,10 +6,10 @@ import "./../assets/scss/global.scss"
 
 import About from "../components/about"
 const IndexPage = () => (
-  <Layout> 
-    <SEO title="Home" />
-    <About /> 
-  </Layout>
-)
+    <Layout> 
+      <SEO title="Home" />
+      <About /> 
+    </Layout>
+  )
 
 export default IndexPage

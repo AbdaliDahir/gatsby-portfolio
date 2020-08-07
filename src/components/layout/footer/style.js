@@ -2,16 +2,18 @@ import styled from 'styled-components';
 import variables from '../../../data/variables';
 
 export const FooterStyle = styled.footer`
-	background: linear-gradient(to top, #efe9e9, transparent 50%);
 	padding-top: 1rem;
   padding-bottom: 8rem;
 	z-index: 0;
 	position: relative;
 	text-align: left;
+	@media(min-width: ${variables.breakpointPhone}) {
+		background: linear-gradient(to top, #efe9e9, transparent 50%);
+	}
 	@media(max-width: ${variables.breakpointPhone}) {
 		padding-bottom: 2rem;
-		padding-left: 1rem;
-		padding-right: 1rem;
+		padding-left: .5rem;
+		padding-right: .5rem;
 		text-align: center;
 	}
 	h4 {
@@ -46,6 +48,15 @@ export const FooterBody = styled.div`
 		grid-template-columns: 1fr;
 	}
 `
+export const FooterSocialMedia = styled.ul`
+	list-style: none;
+	padding-left: 0;
+	@media(max-width: ${variables.breakpointPhone}) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+`
 export const MediaLink = styled.a`
 	padding: 1rem 0rem;
 	padding-bottom: .5rem;
@@ -54,4 +65,5 @@ export const MediaLink = styled.a`
   text-transform: capitalize;
   font-family: "GT-Walsheim-Pro-Bold";
 	color: ${variables.primary};
+	
 `

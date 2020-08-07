@@ -1,7 +1,7 @@
 import React from 'react';
 import socialMedia from "../../../data/socialMedia.json";
 
-import { FooterStyle, FooterBody, SubRight, CopyRight, MediaLink } from './style'
+import { FooterStyle, FooterBody, SubRight, CopyRight, MediaLink, FooterSocialMedia } from './style'
 import {ContainerLayout, ButtonDefault} from '../../common'
 
 const Footer = () => {
@@ -10,13 +10,15 @@ const Footer = () => {
 			<FooterStyle>
 				<ContainerLayout>
 					<FooterBody>
-						<div>
+						<FooterSocialMedia>
 							{socialMedia.map(({ id, name, url }) => (
-								<p key={id}> <MediaLink className="lined-link" href={url} target="_blank" rel="noopener noreferrer" aria-label={`follow us on ${name}`}>
-									{name}
-								</MediaLink> </p>
+								<li key={id}> 
+									<MediaLink className="lined-link" href={url} target="_blank" rel="noopener noreferrer" aria-label={`follow us on ${name}`}>
+										{name}
+									</MediaLink> 
+								</li>
 							))}
-						</div>
+						</FooterSocialMedia>
 						<div>
 							<h4 className="text-primary"> Ready to take the next step and work together? </h4>
 							<ButtonDefault href="mailto:abdali.dahir@gmail.com"> Contact me </ButtonDefault>

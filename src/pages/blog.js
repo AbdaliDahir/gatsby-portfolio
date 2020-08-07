@@ -6,11 +6,11 @@ import { Calendar, Clock } from 'react-feather'
 import Img from "gatsby-image"
 
 import "./../assets/scss/global.scss"
-import {ContainerLayout, WorkPost, Intro, SubTitle, Title, Text, HeaderIntro, SubText, SmallText, UnderLink} from "../components/common"
+import {ContainerLayout, WorkPost, Intro, SubTitle, Title, Text, HeaderIntro, SubText, SmallText, UnderLink, ReadMore} from "../components/common"
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
-
+  
   return (
     <>
       <Layout> 
@@ -49,7 +49,7 @@ const BlogIndex = ({ data }) => {
                     
                     <div className="content">
                       <header>
-                        <p><SmallText> 
+                        <SmallText> 
                           <span className="align-middle">{node.frontmatter.categories.map((item, index) => (
                             <span key={index}>
                               <span className="align-middle text-primary text-underline">#{item}</span>
@@ -57,7 +57,6 @@ const BlogIndex = ({ data }) => {
                             </span>
                           ))} </span>
                         </SmallText>
-                        </p>
                         <Title>
                           <Link className="text-primary" style={{ boxShadow: `none` }} to={node.fields.slug}>
                             {title}
@@ -77,7 +76,9 @@ const BlogIndex = ({ data }) => {
                           __html: node.frontmatter.description || node.excerpt,
                         }}
                       />
-                      <Link to={node.fields.slug} className="lined-link">read more &#8594;</Link>
+                      <Link to={node.fields.slug}>
+                        <ReadMore className="lined-link"> read more &#8594; </ReadMore>
+                      </Link>
                     </div>
                   </WorkPost>
                 )

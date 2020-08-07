@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import colors from '../../data/variables';
+import variables from '../../data/variables';
 
 export const RepoGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
+  @media(min-width: ${variables.breakpointPhone}) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
 `
 export const RepoInfo = styled.div`
   display: flex;
@@ -31,7 +33,7 @@ export const RepoContent = styled.div`
   &:hover {
     box-shadow: 0px 0px 36px 25px rgb(0 0 0 / 3%);
     h2 a {
-      color: ${colors.primary};
+      color: ${variables.primary};
     }
   }
 `
@@ -41,11 +43,13 @@ export const Title = styled.h2`
   font-size: 1.4rem;
   text-transform: capitalize;
   font-family: "GT-Walsheim-Pro-Bold";
+  @media(max-width: ${variables.breakpointPhone}) {
+    font-size: 1rem;
+  }
 `
 export const RepoHead = styled.div`
   display: flex; 
-  justify-content: space-between; 
-  font-size: 14;
+  justify-content: space-between;
 `
 export const Text = styled.p`
   color: rgb(25 27 29);
@@ -53,13 +57,18 @@ export const Text = styled.p`
   margin-top: .25rem;
   font-size: 1rem;
   text-transform: capitalize;
+  @media(max-width: ${variables.breakpointPhone}) {
+    font-size: .9rem;
+  }
 `
 export const FooterItem = styled.span`
   margin-right: .89rem;
+  margin-bottom: 1rem;
   font-size: .9rem;
   color: #242525;
   font-family: "GT-Walsheim-Pro-Medium";
   vertical-align: middle;
+  display: inline-block;
   > * {
     vertical-align: middle;
   }
@@ -69,6 +78,14 @@ export const FooterItem = styled.span`
     &.star {
       fill: #FBC02D;
       stroke: #FFC107;
+    }
+  }
+  @media(max-width: ${variables.breakpointPhone}) {
+    margin-right: .49rem;
+    font-size: .7rem;
+    > svg {
+      width: 12px;
+      height: 12px;
     }
   }
 `

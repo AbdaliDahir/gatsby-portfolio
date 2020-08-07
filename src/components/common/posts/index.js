@@ -13,7 +13,7 @@ export const HeaderIntro = styled.header`
   border-radius: .45rem;
   color: #fff;
   box-shadow: 0px 0px 30px 11px rgb(0 0 0 / 8%);
-  h3,p {
+  h3, p {
     color: #fff;
   }
 `

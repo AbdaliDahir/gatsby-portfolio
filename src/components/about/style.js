@@ -1,11 +1,15 @@
 import Img from "gatsby-image"
 import styled from 'styled-components';
-import colors from '../../data/variables';
+import variables from '../../data/variables';
 
 export const AboutSection = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1.25fr;
-  grid-gap: 10rem;
+  text-align: center;
+  @media only screen and (min-width: ${variables.breakpointLarge}) {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    grid-gap: 10rem;
+    text-align: left;
+  }
 `
 
 export const Avatar =styled(Img)`
@@ -17,6 +21,9 @@ export const Title = styled.h1`
   font-size: 3rem;
   text-transform: capitalize;
   font-family: "GT-Walsheim-Pro-Bold";
+  @media(max-width: ${variables.breakpointPhone}) {
+    font-size: 2rem;
+  }
 `
 export const Text = styled.p`
   font-size: 1.2rem;
@@ -29,13 +36,15 @@ export const Text = styled.p`
   }
 `
 export const SubTitle = styled.h2`
-    font-size: 1.8rem;
-    margin-top: 41px;
-    margin-bottom: 20px;
-    text-align: center;
-    text-transform: uppercase;
-    word-spacing: 8px;
-    font-weight: 900;
+  font-family: "GT-Walsheim-Pro-Medium";
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 8px;
+  @media(min-width: ${variables.breakpointPhone}) {
+    font-size: 1.8em;
+  }
 `
 export const SocialLink = styled.a`
 	border-radius: 5px;
@@ -46,6 +55,6 @@ export const SocialLink = styled.a`
   color: #000;
   transition: background 400ms ease-in-out;
   &:hover {
-    color: ${colors.primary};
+    color: ${variables.primary};
   }
 `

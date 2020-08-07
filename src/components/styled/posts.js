@@ -16,6 +16,10 @@ export const ArticlePost = styled.article`
   padding-bottom: 1rem;
   max-width: 60rem;
   margin: auto;
+  text-align: center;
+  img[src$="imgresponsive"] {
+    max-width:80%;
+  }
 `
 export const SmallText = styled.small`
     font-size: .89rem;

@@ -4,10 +4,9 @@ import colors from "../../../data/variables";
 export const ButtonDefault = styled.a`
   cursor: pointer;
   margin: 10% 0%;
-  font-family:'Open sans',sans-serif;
+  font-family: "GT-Walsheim-Pro-Medium";
   font-size: inherit;
   text-align: center;
-  font-weight: bold;
   letter-spacing: 3px;
   text-transform: uppercase;
   text-decoration:none;
@@ -39,3 +38,20 @@ export const ButtonDefault = styled.a`
     left: -4px;
   }
 `;
+
+export const ReadMore = styled.span`
+  font-size: .89rem;
+  color: #000;
+  font-size: 1rem;
+  text-transform: inherit;
+  letter-spacing: .7px;
+  font-family: "GT-Walsheim-Pro-Medium";
+  &:hover {
+    color: ${colors.primary};
+  }
+  &:after {
+    bottom: 1px;
+    height: 3px;
+    background: ${colors.primary};
+  }
+`

@@ -3,10 +3,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
+
 import "./../assets/scss/global.scss"
-import {Intro, SubTitle, Title, Text} from "../components/styled/blog"
-import {WorkPost, Category} from "../components/styled/works"
-import {Tag, ContainerLayout} from "../components/common"
+import {Tag, ContainerLayout, WorkPost, Category, Intro, SubTitle, Title, Text} from "../components/common"
 
 const WorkIndex = ({ data }) => {
   const works = data.allMarkdownRemark.edges
@@ -27,12 +26,14 @@ const WorkIndex = ({ data }) => {
               const title = node.frontmatter.title || node.fields.slug
                 return (
                   <WorkPost key={node.fields.slug}>
-                    <div className="image-wrapper">
-                      <Link to={node.fields.slug}>
-                        <Img fluid={node.frontmatter.image.childImageSharp.fluid} title="work title" />
-                      </Link>
+                    <div className="media">
+                      <div className="image-wrapper">
+                        <Link to={node.fields.slug}>
+                          <Img fluid={node.frontmatter.image.childImageSharp.fluid} title="work title" />
+                        </Link>
+                      </div>
                     </div>
-                    <section>
+                    <div className="content">
                       <header>
                         <Category>{node.frontmatter.category}</Category>
                         <Title>
@@ -49,7 +50,7 @@ const WorkIndex = ({ data }) => {
                         <div>
                           {node.frontmatter.tags.map((tag, index) => (<Tag key={index}>{tag}</Tag>))}
                         </div>
-                    </section>
+                    </div>
                   </WorkPost>
                 )
               })}

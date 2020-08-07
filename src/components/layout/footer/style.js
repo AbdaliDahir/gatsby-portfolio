@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colors from '../../../data/variables';
+import variables from '../../../data/variables';
 
 export const FooterStyle = styled.footer`
 	background: linear-gradient(to top, #efe9e9, transparent 50%);
@@ -8,31 +8,43 @@ export const FooterStyle = styled.footer`
 	z-index: 0;
 	position: relative;
 	text-align: left;
+	@media(max-width: ${variables.breakpointPhone}) {
+		padding-bottom: 2rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		text-align: center;
+	}
 	h4 {
 		font-size: 4rem;
 		font-weight: 600;
 		line-height: 1.2;
-		color: ${colors.primary}
+		color: ${variables.primary};
+		@media(max-width: ${variables.breakpointPhone}) {
+			font-size: 2rem;
+		}
 	}
 `;
 
 export const SubRight = styled.h6`
 	font-size: 13px;
-	font-weight: 300;
+	line-height: 1.8;
 	letter-spacing:2px;
 	text-transform: capitalize;
 	margin-bottom: 20px;
 `	
 export const CopyRight = styled.p`
 	font-size: 11px;
-	font-weight: 300;
+	line-height: 1.8;
 	letter-spacing:1px;
 	text-transform: capitalize;
 `
 export const FooterBody = styled.div`
 	display: grid;
-	grid-template-columns 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	align-items: center;
+	@media(max-width: ${variables.breakpointPhone}) {
+		grid-template-columns: 1fr;
+	}
 `
 export const MediaLink = styled.a`
 	padding: 1rem 0rem;
@@ -41,5 +53,5 @@ export const MediaLink = styled.a`
 	font-size: 1rem;
   text-transform: capitalize;
   font-family: "GT-Walsheim-Pro-Bold";
-	color: ${colors.primary};
+	color: ${variables.primary};
 `

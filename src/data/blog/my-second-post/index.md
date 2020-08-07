@@ -1,12 +1,11 @@
 ---
 title: How To Increase Reviews & Ratings For Your Company
 date: "2015-05-06T23:46:37.121Z"
+image: './b77a3d5bbb3c4138f637152fc823caa2.webp'
+imageCredit: https://dribbble.com/shots/13970599-Ruuunnn
 time: 12
 categories: ['Blog', 'css']
-image: './blog-image.jpg'
-description: "Not only that, but the second address field also caused them to split their input incorrectly in the address fields. This led to confusion and frustration among users.
-
-Labeling the second address field “Apartment/Suite/Other” did not resolve the issue. Users still came to a confusing stop and wondered whether the field was relevant for them."  
+description: "Not only that, but the second address field also caused them to split their input incorrectly in the address fields. This led to confusion and frustration among users."  
 ---
 
 Have you ever filled out a form and froze on the address field? A [research study](https://baymard.com/blog/address-line-2) found that users come to a confusing stop when they encounter the “address line 2” field.

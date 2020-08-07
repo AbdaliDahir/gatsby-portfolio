@@ -1,10 +1,11 @@
 ---
 title: 3 Tricks to Make Your Load Times Feel Faster
 categories: ['Blog']
-image: './salty_egg.jpg'
+image: './e4d5ed47ee58aa859995cae2a4e83221.webp'
+imageCredit: https://dribbble.com/shots/13972666-faces
 date: "2015-05-01T22:12:03.284Z"
 time: 3
-description: "When users are on the go, the best mobile app experience is a fast one. Although the device’s connection speed is out of your control, you can make your app appear like it loads lightning fast. Here are a few tricks to give users the impression that your app always loads fast even under a slow connection."
+description: "When users are on the go, the best mobile app experience is a fast one. Although the device’s connection speed is out of your control, you can make your app appear like it loads lightning fast."
 ---
 
 This is my first post on my new fake blog! How exciting!
@@ -22,4 +23,4 @@ Oh, and here's a great quote from this Wikipedia on
 > salted duck eggs have a briny aroma, a gelatin-like egg white and a
 > firm-textured, round yolk that is bright orange-red in color.
 
-![Chinese Salty Egg](./salty_egg.jpg)
+![Chinese Salty Egg](./e4d5ed47ee58aa859995cae2a4e83221.webp)

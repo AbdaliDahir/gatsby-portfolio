@@ -43,6 +43,7 @@ export const SocialLink = styled.a`
   display: inline-block;
   padding: 5px 10px;
   cursor: pointer;
+  color: #000;
   transition: background 400ms ease-in-out;
   &:hover {
     color: ${colors.primary};

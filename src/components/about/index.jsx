@@ -1,8 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Facebook, Twitter, Instagram, Linkedin } from 'react-feather'
+import { GitHub, Twitter, Instagram, Linkedin } from 'react-feather'
 import {AboutSection, Avatar, Title, Text, SubTitle, SocialLink} from './style';
 import {SectionIntro, ContainerLayout} from "../common";
+import socialMedia from "../../data/socialMedia.json";
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -26,17 +27,23 @@ const About = () => {
               <Avatar fluid={data.placeholderImage.childImageSharp.fluid} alt="user photo" />
               <SubTitle> Front End Developer </SubTitle>
               <div className="center">
-                <SocialLink target="_blank"> <Facebook /> </SocialLink>
-                <SocialLink target="_blank"> <Twitter /> </SocialLink>
-                <SocialLink target="_blank"> <Instagram /> </SocialLink>
-                <SocialLink target="_blank"> <Linkedin /> </SocialLink>
+                <div>
+                  {socialMedia.map(({ id, name, url }) => (
+                    <SocialLink key={id} href={url} target="_blank" rel="noopener noreferrer" aria-label={`follow us on ${name}`}>
+                      {name === 'twitter' ? <Twitter /> : ""}
+                      {name === 'instagram' ? <Instagram /> : ""}
+                      {name === 'linkedin' ? <Linkedin /> : ""}
+                      {name === 'github' ? <GitHub /> : ""}
+                    </SocialLink>
+                  ))}
+                </div>
               </div>
             </div> 
             <div>
-              <Title> Hello, I’m Limbo </Title>
-              <Text> I'm a digital product designer & design director hailing from <b className="text-primary">North Africa</b> living in Berlin.
-              </Text>
-              <Text>  behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.
+              <Title> Hello, I’m AbdAli </Title>
+              <Text> I'm a digital Front End Developer hailing from <b className="text-primary lined-link">North Africa</b> living in Casablanca. </Text>
+              <Text> I love working with modern technologies, building and designing awesome projects. I prefer minimalistic & clean designs with strong user experience.</Text>
+              <Text> behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.
               </Text>
             </div>
           </AboutSection>

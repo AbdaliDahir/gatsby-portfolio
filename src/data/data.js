@@ -1,16 +1,10 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
-
 module.exports = {
   SiteTitle: 'Abdelali',
   Sitelogo: '#',
   SiteLogoText: 'Abdelali',
   SiteAuthor: 'Abdelali Dahir',
   SiteDescription: 'Front End Developer',
-  legalName: 'John Doe',
-  defaultDescription: 'I’m John and I’m a Software engineer!',
-  githubApiToken: process.env.GATSBY_GITHUB_API_TOKEN,
+  defaultDescription: 'I’m John and I’m a Software engineer!', 
   githubApiQuery: `query ($number_of_repos: Int!) {
     viewer {
       name
@@ -46,23 +40,20 @@ module.exports = {
   }`,
   githubApiVariables: {
     number_of_repos: 12,
-  },
-  GoogleAnalytics: process.env.GATSBY_GOOGLE_ANALYTICS,
+  }, 
   SiteSocialLinks: {
-    twitter: 'http://www.twitter.com/',
-    github: 'https://github.com/',
-    linkedin: 'https://www.linkedin.com/in/',
-    instagram: 'https://instagram.com/',
-    youtube: 'https://www.youtube.com/'
+    twitter: 'https://twitter.com/AbdaliDahir',
+    github: 'https://github.com/AbdaliDahir',
+    linkedin: 'https://www.linkedin.com/in/abdelali-dahir-0b5344111/',
   },
   SiteAddress: {
-    city: 'City',
-    region: 'Region',
-    country: 'Country',
+    city: 'Casablanca',
+    region: 'CurvaSud',
+    country: 'Morocco',
     zipCode: 'ZipCode',
   },
   SiteContact: {
-    email: 'email',
+    email: 'abdali.dahir@gmail.com',
     phone: 'phone number',
   },
   SiteCopyright: '2020',

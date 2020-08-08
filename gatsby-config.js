@@ -1,5 +1,7 @@
 const data = require('./src/data/data');
-
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 module.exports = {
   siteMetadata: {
     title: data.SiteTitle,
@@ -12,7 +14,7 @@ module.exports = {
     {
       resolve: `gatsby-source-github-api`,
       options: {
-        token: data.githubApiToken,
+        token: process.env.GATSBY_GITHUB_API_TOKEN,
         graphQLQuery: data.githubApiQuery,
         variables: data.githubApiVariables,
       },
@@ -78,7 +80,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-          trackingId: data.GoogleAnalytics,
+          trackingId: process.env.GATSBY_GOOGLE_ANALYTICS,
           head: true,
       },
     }

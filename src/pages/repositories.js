@@ -3,7 +3,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Repository from "../components/works/github"
 import { graphql } from "gatsby"
- 
 import {RepoGrid, RepoInfo} from "../components/styled/repository"
 import {SectionIntro, ContainerLayout} from "../components/common";
 
@@ -16,7 +15,7 @@ const RepositoryPage = ({data}) => {
 
   return (
     <Layout> 
-      <SEO title="Home" />
+      <SEO title="Github Repositories" />
       <ContainerLayout>
         <SectionIntro>
           <RepoInfo>

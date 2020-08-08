@@ -1,6 +1,6 @@
 import React from 'react';
 import socialMedia from "../../../data/socialMedia.json";
-
+import data from "./../../../data/data";
 import { FooterStyle, FooterBody, SubRight, CopyRight, MediaLink, FooterSocialMedia } from './style'
 import {ContainerLayout, ButtonDefault} from '../../common'
 
@@ -21,7 +21,7 @@ const Footer = () => {
 						</FooterSocialMedia>
 						<div>
 							<h4 className="text-primary"> Ready to take the next step and work together? </h4>
-							<ButtonDefault href="mailto:abdali.dahir@gmail.com"> Contact me </ButtonDefault>
+							<ButtonDefault href={`mailto:${data.SiteContact.email}`}> Contact me </ButtonDefault>
 						</div>
 					</FooterBody>
 					<div className="box">
@@ -31,7 +31,7 @@ const Footer = () => {
 							<span> {new Date().getFullYear()}, Built with {` `} 
 								<a href="https://www.gatsbyjs.org">Gatsby</a>{" "}
           		</span> 
-							Copyright 2020 by Abdelali Dahir </CopyRight>
+							Copyright 2020 by {data.SiteAuthor} </CopyRight>
 					</div>
 				</ContainerLayout>
 			</FooterStyle>

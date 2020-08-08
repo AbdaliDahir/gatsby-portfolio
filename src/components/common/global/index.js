@@ -58,6 +58,9 @@ export const GlobalStyle = createGlobalStyle`
     img {
       border-style: none;
     }
+    .center {
+      text-align: center;
+    }
     button,
     input,
     optgroup,

@@ -56,6 +56,9 @@ export const FooterSocialMedia = styled.ul`
 		align-items: center;
 		justify-content: space-between;
 	}
+	li {
+		margin-bottom: 1.5rem;
+	}
 `
 export const MediaLink = styled.a`
 	padding: 1rem 0rem;

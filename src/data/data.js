@@ -8,6 +8,8 @@ module.exports = {
   SiteLogoText: 'Abdelali',
   SiteAuthor: 'Abdelali Dahir',
   SiteDescription: 'Front End Developer',
+  legalName: 'John Doe',
+  defaultDescription: 'I’m John and I’m a Software engineer!',
   githubApiToken: process.env.GATSBY_GITHUB_API_TOKEN,
   githubApiQuery: `query ($number_of_repos: Int!) {
     viewer {
@@ -45,6 +47,7 @@ module.exports = {
   githubApiVariables: {
     number_of_repos: 12,
   },
+  GoogleAnalytics: process.env.GATSBY_GOOGLE_ANALYTICS,
   SiteSocialLinks: {
     twitter: 'http://www.twitter.com/',
     github: 'https://github.com/',

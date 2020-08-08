@@ -4,7 +4,6 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { Calendar } from 'react-feather'
 
-import "./../../assets/scss/global.scss"
 import {Intro, Title, ArticlePost, SmallText, ArticleBody} from '../../components/styled/posts'
 import {ContainerLayout} from '../../components/common'
 

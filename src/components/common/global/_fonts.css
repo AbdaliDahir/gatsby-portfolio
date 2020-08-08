@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'GT-Walsheim-Pro-Regular';
+  src: url('../../../assets/fonts/GT-Walsheim-Pro-Regular.woff2') format('woff2'); /* Super Modern Browsers */
+}
+@font-face {
+  font-family: 'GT-Walsheim-Pro-Medium';
+  src: url('../../../assets/fonts/GT-Walsheim-Pro-Medium.woff2') format('woff2'); /* Super Modern Browsers */
+}
+@font-face {
+  font-family: 'GT-Walsheim-Pro-Bold';
+  src: url('../../../assets/fonts/GT-Walsheim-Pro-Bold.woff2') format('woff2'); /* Super Modern Browsers */
+}

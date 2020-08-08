@@ -4,7 +4,6 @@ import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import "./../assets/scss/global.scss"
 import {Tag, ContainerLayout, WorkPost, Category, Intro, SubTitle, Title, Text} from "../components/common"
 
 const WorkIndex = ({ data }) => {

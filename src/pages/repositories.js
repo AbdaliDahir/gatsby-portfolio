@@ -3,8 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Repository from "../components/works/github"
 import { graphql } from "gatsby"
-
-import "./../assets/scss/global.scss"
+ 
 import {RepoGrid, RepoInfo} from "../components/styled/repository"
 import {SectionIntro, ContainerLayout} from "../components/common";
 
@@ -22,7 +21,7 @@ const RepositoryPage = ({data}) => {
         <SectionIntro>
           <RepoInfo>
             <img src={avatarUrl} alt="repo Avatar" />
-            <h4>{name}</h4>
+            <h2>{name}</h2>
           </RepoInfo>
           <RepoGrid>
             {repositories.nodes.map((repo, index) => <Repository key={index} repo={repo} />).reverse()}

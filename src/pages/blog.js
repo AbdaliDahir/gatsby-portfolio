@@ -5,7 +5,6 @@ import { Link, graphql } from "gatsby"
 import { Calendar, Clock } from 'react-feather'
 import Img from "gatsby-image"
 
-import "./../assets/scss/global.scss"
 import {ContainerLayout, WorkPost, Intro, SubTitle, Title, Text, HeaderIntro, SubText, SmallText, UnderLink, ReadMore} from "../components/common"
 
 const BlogIndex = ({ data }) => {

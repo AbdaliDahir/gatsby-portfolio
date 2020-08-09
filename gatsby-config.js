@@ -10,7 +10,9 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -54,8 +56,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -71,7 +71,7 @@ module.exports = {
     {
       resolve: `gatsby-source-github-api`,
       options: {
-        token: process.env.GATSBY_GITHUB_API_TOKEN,
+        token: '73ee678b07325b42d2a055e9d48c091e192cb332',
         graphQLQuery: data.githubApiQuery,
         variables: data.githubApiVariables,
       },

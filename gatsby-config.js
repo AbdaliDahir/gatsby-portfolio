@@ -12,14 +12,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-source-github-api`,
-      options: {
-        token: process.env.GATSBY_GITHUB_API_TOKEN,
-        graphQLQuery: data.githubApiQuery,
-        variables: data.githubApiVariables,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
@@ -76,6 +68,14 @@ module.exports = {
         icon: `src/assets/img/portfolio-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        token: process.env.GATSBY_GITHUB_API_TOKEN,
+        graphQLQuery: data.githubApiQuery,
+        variables: data.githubApiVariables,
+      },
+    },
     // https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -83,7 +83,16 @@ module.exports = {
           trackingId: process.env.GATSBY_GOOGLE_ANALYTICS,
           head: true,
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `tomato`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import NProgress from 'nprogress'
 import Navbar from "./navbar"
 import Footer from "./footer"
 
@@ -18,6 +18,9 @@ const Layout = ({ children }) => {
     }
   `)
 
+  NProgress.configure({ showSpinner: false });
+  NProgress.start();
+  NProgress.done();
   return (
     <>
       <GlobalStyle />

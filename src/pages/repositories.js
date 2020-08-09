@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Repository from "../components/works/github"
 import { graphql } from "gatsby"
-import {RepoGrid, RepoInfo} from "../components/styled/repository"
+import {RepoGrid, RepoInfo, Avatar} from "../components/styled/repository"
 import {SectionIntro, ContainerLayout} from "../components/common";
 
 const RepositoryPage = ({data}) => { 
@@ -19,7 +19,7 @@ const RepositoryPage = ({data}) => {
       <ContainerLayout>
         <SectionIntro>
           <RepoInfo>
-            <img src={avatarUrl} alt="repo Avatar" />
+            <Avatar style={{ backgroundImage: `url(${avatarUrl})` }} />
             <h2>{name}</h2>
           </RepoInfo>
           <RepoGrid>

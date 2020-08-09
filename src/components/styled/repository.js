@@ -13,14 +13,17 @@ export const RepoInfo = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 6rem;
-  img {
-    width: 100px;
-    height: 100px;
-    border-radius: .5rem;
-    border: 10px solid #fff;
-    box-shadow: 0 0 20px 10px rgb(27 26 26 / 10%);
-    margin-right: 1rem
-  }
+`
+export const Avatar = styled.div`
+  width: 100px;
+  height: 100px;
+  border-radius: .5rem;
+  border: 10px solid #fff;
+  box-shadow: 0 0 20px 10px rgb(27 26 26 / 10%);
+  margin-right: 1rem;
+  background-color: #F9F9F9;
+  background-size: cover;
+  background-position: center;
 `
 
 export const RepoContent = styled.div`

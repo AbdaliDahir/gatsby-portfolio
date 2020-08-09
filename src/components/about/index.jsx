@@ -8,7 +8,7 @@ import socialMedia from "../../data/socialMedia.json";
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "profile2.webp" }) {
+      placeholderImage: file(relativePath: { eq: "profile.webp" }) {
         childImageSharp {
           fluid(maxWidth: 550) {
             ...GatsbyImageSharpFluid

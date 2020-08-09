@@ -18,9 +18,6 @@ const Layout = ({ children }) => {
     }
   `)
 
-  NProgress.configure({ showSpinner: false });
-  NProgress.start();
-  NProgress.done();
   return (
     <>
       <GlobalStyle />

@@ -93,7 +93,6 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 - fetching data from the official GitHub [gatsby-source-github-api](https://github.com/ldd/gatsby-source-github-api)
 - Google Analytics integration
 - Easy site customization
-- Uses styled-components + styled-system for styling
   
 ## 🎓 Learning Gatsby
 

@@ -38,6 +38,7 @@ export const GlobalStyle = createGlobalStyle`
     b,
     strong {
       font-weight: bolder;
+      font-family: 'GT-Walsheim-Pro-Bold';
     }
     small {
       font-size: 80%;

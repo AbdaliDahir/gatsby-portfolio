@@ -16,9 +16,9 @@ export const FooterStyle = styled.footer`
 		padding-right: .5rem;
 		text-align: center;
 	}
-	h4 {
+	.quote {
 		font-size: 4rem;
-		font-weight: 600;
+		font-family: "GT-Walsheim-Pro-Bold";
 		line-height: 1.2;
 		color: ${variables.primary};
 		@media(max-width: ${variables.breakpointPhone}) {
@@ -27,12 +27,13 @@ export const FooterStyle = styled.footer`
 	}
 `;
 
-export const SubRight = styled.h6`
-	font-size: 13px;
+export const SubRight = styled.p`
+	font-size: 1rem;
 	line-height: 1.8;
 	letter-spacing:2px;
 	text-transform: capitalize;
 	margin-bottom: 20px;
+	font-family: "GT-Walsheim-Pro-Bold";
 `	
 export const CopyRight = styled.p`
 	font-size: 11px;

@@ -53,7 +53,6 @@ typings/
 
 # dotenv environment variable files
 .env*
-.env.development
 
 # gatsby files
 .cache/

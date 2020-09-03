@@ -84,8 +84,7 @@ export const data = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description,
-        time,
-
+        time
       }
     }
   }

@@ -11,5 +11,5 @@ export const Tag = styled.span`
   margin-right: 1rem;
   border: 1px solid rgb(0 0 0 / 2%);
   display: inline-block;
-  margin-bottom: 5px;
+  margin-bottom: 1rem;
 `

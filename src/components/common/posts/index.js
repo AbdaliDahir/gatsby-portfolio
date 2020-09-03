@@ -6,16 +6,11 @@ export const Intro = styled.div`
   font-family: "GT-Walsheim-Pro-Regular";
 `;
 export const HeaderIntro = styled.header`
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-gap: 34px;
+  justify-content: space-between;
   margin-bottom: 6rem;
-  max-width: 800px;
-  background: ${variables.primary};
-  padding: 3rem 2rem;
-  border-radius: .45rem;
-  color: #fff;
-  box-shadow: 0px 0px 30px 11px rgb(0 0 0 / 8%);
-  h3, p {
-    color: #fff;
-  }
 `
 export const Title = styled.h1`
   font-family: "GT-Walsheim-Pro-Bold";

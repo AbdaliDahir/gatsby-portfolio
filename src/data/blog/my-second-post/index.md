@@ -4,7 +4,7 @@ date: "2015-05-06T23:46:37.121Z"
 image: './b77a3d5bbb3c4138f637152fc823caa2.webp'
 imageCredit: https://dribbble.com/shots/13970599-Ruuunnn
 time: 12
-categories: ['Blog', 'css']
+categories: ['javascript', 'css']
 description: "Not only that, but the second address field also caused them to split their input incorrectly in the address fields. This led to confusion and frustration among users."  
 ---
 

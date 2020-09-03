@@ -4,8 +4,9 @@ import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 import { Calendar, Clock } from 'react-feather'
 import Img from "gatsby-image"
-
 import {ContainerLayout, WorkPost, Intro, SubTitle, Title, Text, HeaderIntro, SubText, SmallText, UnderLink, ReadMore} from "../components/common"
+import CategoriesTags from '../components/CategoriesTags/categoriesTags';
+import kebabCase from "lodash/kebabCase"
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
@@ -13,18 +14,18 @@ const BlogIndex = ({ data }) => {
   return (
     <>
       <Layout> 
-        <SEO title="Portfolio Home Page" />
+        <SEO title="Blog Home Page" />
         <Intro>
           <ContainerLayout>
 
-            {/* Header  */}
+            <SubTitle>
+              Articles
+            </SubTitle>
             <HeaderIntro>
-              <SubTitle>
-                Articles
-              </SubTitle>
               <SubText>
                 Articles on front-end design engineering, focused on HTML, CSS, SVG, accessiblity, and everything in between, with practical tips from real projects. Included here are links to articles published on magazines.
               </SubText>
+              <CategoriesTags /> 
             </HeaderIntro>
 
             <ContainerLayout className="wrapper">
@@ -50,10 +51,10 @@ const BlogIndex = ({ data }) => {
                       <header>
                         <SmallText> 
                           <span className="align-middle">{node.frontmatter.categories.map((item, index) => (
-                            <span key={index}>
+                            <Link to={`/${kebabCase(item)}`} key={index}>
                               <span className="align-middle text-primary text-underline">#{item}</span>
                               {node.frontmatter.categories.length !== index + 1 ? <span className="align-middle text-primary"> , </span> : ""}
-                            </span>
+                            </Link>
                           ))} </span>
                         </SmallText>
                         <Title>

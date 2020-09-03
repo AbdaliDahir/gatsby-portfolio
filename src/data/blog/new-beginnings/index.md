@@ -4,7 +4,7 @@ date: "2015-05-28T22:40:32.169Z"
 image: './740484a4790bd97387629172c77ea14c.webp'
 imageCredit: https://dribbble.com/shots/13973611-Smile
 time: 20
-categories: ['Blog', 'css']
+categories: ['web development', 'css', 'tricks']
 description: "Radio buttons and checkboxes have long been components that cause users confusion. These components are often used in the same context, but look completely different."
 ---
 

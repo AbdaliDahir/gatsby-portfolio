@@ -8,12 +8,11 @@ import {ContainerLayout, WorkPost, Intro, SubTitle, Title, Text, HeaderIntro, Su
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
-const Categories = ({ pageContext, data }) => {
-  const { category } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${category}"`
+const Categories = ({ data }) => {
+  const { edges} = data.allMarkdownRemark
+  // const tagHeader = `${totalCount} post${
+  //   totalCount === 1 ? "" : "s"
+  // } tagged with "${category}"`
 
   return (
     <Layout> 

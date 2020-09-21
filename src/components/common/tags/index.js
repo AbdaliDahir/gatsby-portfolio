@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import variables from '../../../data/variables';
 
-export const Tag = styled.span`
+export const Tag = styled.a`
   color: #a9aaab;
   text-transform: uppercase;
   letter-spacing: .05em;
@@ -12,4 +13,9 @@ export const Tag = styled.span`
   border: 1px solid rgb(0 0 0 / 2%);
   display: inline-block;
   margin-bottom: 1rem;
+  &.active {
+    background: ${variables.primary};
+    color: ${variables.inverse};
+    font-family: "GT-Walsheim-Pro-Bold";
+  }
 `

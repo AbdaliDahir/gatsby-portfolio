@@ -6,7 +6,6 @@ export const NavbarLogo = styled.div`
     color: ${variables.black};
     font-size: 2.3rem;
     font-family: "GT-Walsheim-Pro-Bold";
-    text-shadow: 2px 2px 0px ${variables.primary};
   }
   @media(max-width: ${variables.breakpointPhone}) {
     display: none

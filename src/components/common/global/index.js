@@ -153,4 +153,8 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1);
   }
 }
+
+.error__emoji {
+  width: 30vw;
+}
 `

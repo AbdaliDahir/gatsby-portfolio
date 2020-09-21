@@ -22,9 +22,9 @@ const CategoriesTags = () => {
     <div>
       <div>
         {data.allMarkdownRemark.group.map(tag => (
-          <Link key={tag.fieldValue} to={`/${kebabCase(tag.fieldValue)}/`}>
-            <Tag >{tag.fieldValue} {tag.totalCount} </Tag>
-          </Link>
+          <Tag as={Link} key={tag.fieldValue} to={`/${kebabCase(tag.fieldValue)}/`} activeClassName="active">
+            <span>{tag.fieldValue} {tag.totalCount} </span>
+          </Tag>
         ))}
       </div>
     </div>

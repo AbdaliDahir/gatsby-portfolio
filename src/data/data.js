@@ -4,7 +4,7 @@ module.exports = {
   SiteLogoText: 'Abdelali',
   SiteAuthor: 'Abdelali Dahir',
   SiteDescription: 'Front End Developer',
-  defaultDescription: 'I’m John and I’m a Software engineer!', 
+  defaultDescription: 'Software engineer!', 
   githubApiQuery: `query ($number_of_repos: Int!) {
     viewer {
       name

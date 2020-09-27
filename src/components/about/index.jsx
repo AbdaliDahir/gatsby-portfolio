@@ -1,9 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { GitHub, Twitter, Instagram, Linkedin } from 'react-feather'
-import {AboutSection, Avatar, Title, Text, SubTitle, SocialLink} from './style';
+import {AboutSection, Avatar, Title, Text, SubTitle} from './style';
 import {SectionIntro, ContainerLayout, ResumeButton} from "../common";
-import socialMedia from "../../data/socialMedia.json";
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -17,7 +15,6 @@ const About = () => {
       }
     }
   `)
-
   return (
     <>
       <SectionIntro>
@@ -26,18 +23,6 @@ const About = () => {
             <div>
               <Avatar fluid={data.placeholderImage.childImageSharp.fluid} alt="user photo" />
               <SubTitle> Front End Developer</SubTitle>
-              <div className="center">
-                <div>
-                  {socialMedia.map(({ id, name, url }) => (
-                    <SocialLink key={id} href={url} target="_blank" rel="noopener noreferrer" aria-label={`follow us on ${name}`}>
-                      {name === 'twitter' ? <Twitter /> : ""}
-                      {name === 'instagram' ? <Instagram /> : ""}
-                      {name === 'linkedin' ? <Linkedin /> : ""}
-                      {name === 'github' ? <GitHub /> : ""}
-                    </SocialLink>
-                  ))}
-                </div>
-              </div>
             </div> 
             <div>
               <Title> Hello, I’m AbdAli </Title>

@@ -45,15 +45,3 @@ export const SubTitle = styled.h2`
     font-size: 1.8em;
   }
 `
-export const SocialLink = styled.a`
-	border-radius: 5px;
-  margin: 5px;
-  display: inline-block;
-  padding: 5px 10px;
-  cursor: pointer;
-  color: #000;
-  transition: background 400ms ease-in-out;
-  &:hover {
-    color: ${variables.primary};
-  }
-`

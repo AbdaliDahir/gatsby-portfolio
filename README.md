@@ -28,6 +28,24 @@ creative personal & portfolio template based on gatsby. designed so you can show
     ```shell
     cd gatsby-portfolio/
     npm install
+    ```
+
+    Set up environment.
+    ```shell
+    cp .env.example .env.development
+    vi .env.development
+    ```
+    Open the file `.env.development` and paste your personal GitHub access token in it.
+    At least with repository and user read access. The file should then look like the following
+
+    ```text
+    # .env.development
+    GATSBY_GITHUB_API_TOKEN=b621..................
+    GATSBY_GOOGLE_ANALYTICS=
+    ```
+
+    Start development server
+    ```shell
     gatsby develop
     ```
 

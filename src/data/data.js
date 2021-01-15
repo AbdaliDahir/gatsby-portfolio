@@ -3,7 +3,7 @@ module.exports = {
   Sitelogo: '#',
   SiteLogoText: 'Abdelali',
   SiteAuthor: 'Abdelali Dahir',
-  SiteDescription: 'Front End Developer',
+  SiteDescription: 'Full Stack Developer',
   defaultDescription: 'Software engineer!', 
   githubApiQuery: `query ($number_of_repos: Int!) {
     viewer {
@@ -42,13 +42,13 @@ module.exports = {
     number_of_repos: 12,
   }, 
   SiteSocialLinks: {
-    twitter: 'https://twitter.com/AbdaliDahir',
+    twitter: 'https://twitter.com/AbdaliDahirr',
     github: 'https://github.com/AbdaliDahir',
     linkedin: 'https://www.linkedin.com/in/abdelali-dahir-0b5344111/',
   },
   SiteAddress: {
     city: 'Casablanca',
-    region: 'CurvaSud',
+    region: 'Test',
     country: 'Morocco',
     zipCode: 'ZipCode',
   },

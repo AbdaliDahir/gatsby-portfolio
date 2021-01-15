@@ -27,6 +27,13 @@ export const ArticlePost = styled.article`
       border: 1px solid;
       padding: 9px;
   }
+  ul {
+    line-height: 29px;
+    li u {
+      color: #18b31e;
+      font-size: 1.1rem;
+    }
+  }
 `
 export const SmallText = styled.small`
     font-size: .89rem;

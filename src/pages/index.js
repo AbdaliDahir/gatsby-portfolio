@@ -4,10 +4,10 @@ import SEO from "./../components/seo"
 import About from "../components/about"
 
 const IndexPage = () => (
-    <Layout> 
-      <SEO title="About me" />
-      <About /> 
-    </Layout>
-  )
+  <Layout>
+    <SEO title="About me" />
+    <About />
+  </Layout>
+)
 
 export default IndexPage

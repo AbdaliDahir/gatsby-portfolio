@@ -1,10 +1,10 @@
 module.exports = {
-  SiteTitle: 'Abdelali',
+  SiteTitle: 'Amir Harrison',
   Sitelogo: '#',
-  SiteLogoText: 'Abdelali',
-  SiteAuthor: 'Abdelali Dahir',
+  SiteLogoText: 'AmirHarrison',
+  SiteAuthor: 'Amir Harrison',
   SiteDescription: 'Front End Developer',
-  defaultDescription: 'Software engineer!', 
+  defaultDescription: 'Software engineer!',
   githubApiQuery: `query ($number_of_repos: Int!) {
     viewer {
       name
@@ -40,21 +40,21 @@ module.exports = {
   }`,
   githubApiVariables: {
     number_of_repos: 12,
-  }, 
+  },
   SiteSocialLinks: {
-    twitter: 'https://twitter.com/AbdaliDahir',
-    github: 'https://github.com/AbdaliDahir',
-    linkedin: 'https://www.linkedin.com/in/abdelali-dahir-0b5344111/',
+    // twitter: 'https://twitter.com/AbdaliDahir',
+    github: 'https://github.com/aharri64',
+    linkedin: 'https://www.linkedin.com/in/amir-scott-harrison/',
   },
   SiteAddress: {
-    city: 'Casablanca',
-    region: 'CurvaSud',
-    country: 'Morocco',
-    zipCode: 'ZipCode',
+    city: 'Denver',
+    region: 'Colorado',
+    country: 'USA',
+    zipCode: '80237',
   },
   SiteContact: {
-    email: 'abdali.dahir@gmail.com',
-    phone: 'phone number',
+    email: 'haveacompletedaygmail.com',
+    phone: '7202529844',
   },
-  SiteCopyright: '2020',
+  SiteCopyright: '2021',
 };

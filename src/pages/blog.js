@@ -4,32 +4,32 @@ import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 import { Calendar, Clock } from 'react-feather'
 import Img from "gatsby-image"
-import {ContainerLayout, WorkPost, Intro, SubTitle, Title, Text, HeaderIntro, SubText, SmallText, UnderLink, ReadMore} from "../components/common"
+import { ContainerLayout, WorkPost, Intro, SubTitle, Title, Text, HeaderIntro, SubText, SmallText, UnderLink, ReadMore } from "../components/common"
 import CategoriesTags from '../components/CategoriesTags/categoriesTags';
 import kebabCase from "lodash/kebabCase"
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
-  
+
   return (
     <>
-      <Layout> 
+      <Layout>
         <SEO title="Blog Home Page" />
         <Intro>
           <ContainerLayout>
 
             <SubTitle>
-              Articles
+              Projects
             </SubTitle>
             <HeaderIntro>
               <SubText>
-                Articles on front-end design engineering, focused on HTML, CSS, SVG, accessiblity, and everything in between, with practical tips from real projects. Included here are links to articles published on magazines.
+                Below is a collection of my most recent projects from newest to oldest. Each project comes with a link to the github repository and the live site. For a complete list please follow this link: <a href="https://github.com/aharri64"> My Github Repository </a>
               </SubText>
-              <CategoriesTags /> 
+              <CategoriesTags />
             </HeaderIntro>
 
             <ContainerLayout className="wrapper">
-                {posts.map(({ node }) => {
+              {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
                   <WorkPost key={node.fields.slug}>
@@ -37,19 +37,19 @@ const BlogIndex = ({ data }) => {
                       <div className="image-wrapper">
                         <Link to={node.fields.slug}>
                           <Img fluid={node.frontmatter.image.childImageSharp.fluid} title="work title" />
-                        </Link> 
+                        </Link>
                       </div>
                       <SmallText>
-                        Image Credits : 
+                        Git Repository :
                         <UnderLink href={node.frontmatter.imageCredit} target="_blank" title="image credit">
                           {node.frontmatter.imageCredit}
                         </UnderLink>
                       </SmallText>
                     </div>
-                    
+
                     <div className="content">
                       <header>
-                        <SmallText> 
+                        <SmallText>
                           <span className="align-middle">{node.frontmatter.categories.map((item, index) => (
                             <Link to={`/${kebabCase(item)}`} key={index}>
                               <span className="align-middle text-primary text-underline">#{item}</span>
@@ -62,12 +62,12 @@ const BlogIndex = ({ data }) => {
                             {title}
                           </Link>
                         </Title>
-                        <SmallText> 
-                          <Calendar className="align-middle text-primary" width="18" height="18" /> 
+                        <SmallText>
+                          <Calendar className="align-middle text-primary" width="18" height="18" />
                           <span className="align-middle"> date published : {node.frontmatter.date} </span>
                         </SmallText>
-                        <SmallText> 
-                          <Clock className="align-middle text-primary" width="18" height="18" /> 
+                        <SmallText>
+                          <Clock className="align-middle text-primary" width="18" height="18" />
                           <span className="align-middle"> read time : {node.frontmatter.time} </span>
                         </SmallText>
                       </header>

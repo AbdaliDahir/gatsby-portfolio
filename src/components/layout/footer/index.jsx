@@ -2,7 +2,7 @@ import React from 'react';
 import socialMedia from "../../../data/socialMedia.json";
 import data from "./../../../data/data";
 import { FooterStyle, FooterBody, SubRight, CopyRight, MediaLink, FooterSocialMedia } from './style'
-import {ContainerLayout, ButtonDefault} from '../../common'
+import { ContainerLayout, ButtonDefault } from '../../common'
 
 const Footer = () => {
 	return (
@@ -12,10 +12,10 @@ const Footer = () => {
 					<FooterBody>
 						<FooterSocialMedia>
 							{socialMedia.map(({ id, name, url }) => (
-								<li key={id}> 
+								<li key={id}>
 									<MediaLink className="lined-link" href={url} target="_blank" rel="noopener noreferrer" aria-label={`follow us on ${name}`}>
 										{name}
-									</MediaLink> 
+									</MediaLink>
 								</li>
 							))}
 						</FooterSocialMedia>
@@ -27,11 +27,11 @@ const Footer = () => {
 					<div className="box">
 						<SubRight> Good design doesn't date. Bad design does. </SubRight>
 						<CopyRight className="text-dark">
-							© 
-							<span> {new Date().getFullYear()}, Built with {` `} 
+							©
+							{/* <span> {new Date().getFullYear()}, Built {` `}
 								<a href="https://www.gatsbyjs.org">Gatsby</a>{" "}
-          		</span> 
-							Copyright 2020 by {data.SiteAuthor} </CopyRight>
+							</span> */}
+							Copyright 2021 by {data.SiteAuthor} </CopyRight>
 					</div>
 				</ContainerLayout>
 			</FooterStyle>

@@ -4,11 +4,11 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { Calendar } from 'react-feather'
 
-import {Intro, Title, ArticlePost, SmallText, ArticleBody} from '../../components/styled/posts'
-import {ContainerLayout} from '../../components/common'
+import { Intro, Title, ArticlePost, SmallText, ArticleBody } from '../../components/styled/posts'
+import { ContainerLayout } from '../../components/common'
 
 
-const portfolioWork = ({data, pageContext, location}) => {
+const portfolioWork = ({ data, pageContext, location }) => {
   const work = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
 
@@ -26,12 +26,12 @@ const portfolioWork = ({data, pageContext, location}) => {
                 <Title>
                   {work.frontmatter.title}
                 </Title>
-                <SmallText> 
-                  <Calendar className="align-middle text-primary" width="18" height="18" /> 
+                <SmallText>
+                  <Calendar className="align-middle text-primary" width="18" height="18" />
                   <span className="align-middle"> date published : {work.frontmatter.date} </span>
                 </SmallText>
               </header>
-              
+
               <ArticleBody dangerouslySetInnerHTML={{ __html: work.html }} />
             </ArticlePost>
           </div>

@@ -29,7 +29,7 @@ export const SmallText = styled.small`
       padding-left: 5px;
     }
 `
-export const ArticleBody = styled.div `
+export const ArticleBody = styled.div`
   margin-top: 5rem;
   p {
     font-size: 1.5rem;

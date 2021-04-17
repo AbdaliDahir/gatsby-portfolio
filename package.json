@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-portfolio",
+  "name": "myportfolio",
   "private": true,
-  "description": "A simple personal & portfolio template",
+  "description": "A simple personal portfolio",
   "version": "0.1.0",
-  "author": "AbdelAli <abdali.dahir@gmail.com>",
+  "author": "Amir Harrison <haveacompleteday@gmail.com>",
   "dependencies": {
     "gatsby": "^2.28.2",
     "gatsby-image": "^2.4.7",

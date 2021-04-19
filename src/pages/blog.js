@@ -40,11 +40,11 @@ const BlogIndex = ({ data }) => {
                         </Link>
                       </div>
                       <SmallText>
-                        Git Repository :
                         <UnderLink href={node.frontmatter.imageCredit} target="_blank" title="image credit">
-                          {node.frontmatter.imageCredit}
+                          {node.frontmatter.siteName}
                         </UnderLink>
                       </SmallText>
+
                     </div>
 
                     <div className="content">
@@ -64,12 +64,12 @@ const BlogIndex = ({ data }) => {
                         </Title>
                         <SmallText>
                           <Calendar className="align-middle text-primary" width="18" height="18" />
-                          <span className="align-middle"> date published : {node.frontmatter.date} </span>
+                          <span className="align-middle"> Creation Date : {node.frontmatter.date} </span>
                         </SmallText>
-                        <SmallText>
+                        {/* <SmallText>
                           <Clock className="align-middle text-primary" width="18" height="18" />
-                          <span className="align-middle"> read time : {node.frontmatter.time} </span>
-                        </SmallText>
+                          <span className="align-middle"> read time : {node.frontmatter.time}"> live Site </span>
+                        </SmallText> */}
                       </header>
                       <Text
                         dangerouslySetInnerHTML={{
@@ -120,7 +120,9 @@ export const pageQuery = graphql`
             }
             categories
             imageCredit
+            siteName
             description
+            
           }
         }
       }

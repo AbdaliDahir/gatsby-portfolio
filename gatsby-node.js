@@ -50,6 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                
               }
             }
           }
@@ -65,7 +66,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create blog posts pages.
   const posts = blogResult.data.blogGroup.edges
   const works = worksResult.data.allMarkdownRemark.edges
-  
+
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
@@ -91,7 +92,7 @@ exports.createPages = async ({ graphql, actions }) => {
           category: category.fieldValue,
         },
       })
-  })
+    })
   })
   works.forEach((work) => {
     createPage({

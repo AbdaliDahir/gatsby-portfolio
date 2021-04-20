@@ -24,7 +24,7 @@ const portfolioWork = ({ data, pageContext, location }) => {
             <ArticlePost>
               <header>
                 <Title>
-                  {work.frontmatter.title}
+                  {/* {work.frontmatter.title} */}
                 </Title>
                 <SmallText>
                   <Calendar className="align-middle text-primary" width="18" height="18" />

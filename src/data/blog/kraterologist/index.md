@@ -1,10 +1,10 @@
 ---
 title: Kraterologist
-date: "2015-05-06T23:46:37.121Z"
+date: "2021-02-23T23:46:37.121Z"
 image: './Kraterologist.png'
 imageCredit: https://kraterologist.herokuapp.com/
 siteName: "Kraterologist Live Site"
-categories: ['Node.js', 'Express.js', 'JavaScript', 'Sequelize', 'PostgreSQL', 'CSS', 'HTML']
+categories: ['Node.js', 'Express.js', 'EJS', 'JavaScript', 'Sequelize', 'PostgreSQL', 'CSS', 'HTML']
 description: "Kraterologist is a cocktail application where Bartenders, Bar Managers, Restaurateurs, Aficionados, and Enthusiasts can gather to collaborate, brainstorm, and learn about classic cocktails and variations on which. Signup for an account and start searching for your favorite cocktails, adapt them to your needs, and explore new variations. Happy mixing!"  
 ---
 

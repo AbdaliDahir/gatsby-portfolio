@@ -1,6 +1,6 @@
-  
+//This is how we change the color for all the buttons
 export default {
-  primary: "#ff2d2d",
+  primary: "#2d42ff",
   inverse: "#fff",
   // colors
   darkGrey: "#333447",

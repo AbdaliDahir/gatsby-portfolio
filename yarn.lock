@@ -5091,6 +5091,11 @@
     "tmp" "^0.0.33"
     "tslib" "^1.10.0"
 
+"devicon-react-svg@^0.2.3":
+  "integrity" "sha512-sy81d4yTglUNextq3Q4sUI1LB+gUrgfRzyNG3H3Skg36TQZ/WFlWwXFhgJ+53kZ9vU0kg33tgjHKhI8LX3DDZw=="
+  "resolved" "https://registry.npmjs.org/devicon-react-svg/-/devicon-react-svg-0.2.3.tgz"
+  "version" "0.2.3"
+
 "dicer@0.3.0":
   "integrity" "sha512-MdceRRWqltEG2dZqO769g27N/3PXfcKl04VhYnBlo2YhH7zPi88VebsjTKclaOyiuMaGU72hTfw3VkUitGcVCA=="
   "resolved" "https://registry.npmjs.org/dicer/-/dicer-0.3.0.tgz"

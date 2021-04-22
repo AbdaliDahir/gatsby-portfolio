@@ -15,8 +15,8 @@ export const RepoInfo = styled.div`
   margin-bottom: 6rem;
 `
 export const Avatar = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: .5rem;
   border: 10px solid #fff;
   box-shadow: 0 0 20px 10px rgb(27 26 26 / 10%);

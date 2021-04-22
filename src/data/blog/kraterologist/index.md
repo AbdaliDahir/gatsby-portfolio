@@ -12,7 +12,7 @@ description: "Kraterologist is a cocktail application where Bartenders, Bar Mana
 
 [Kraterologist Deployed Site](https://kraterologist.herokuapp.com/)
 
-Kraterologist is a cocktail application where Bartenders, Bar Managers, Restaurateurs, Aficionados, and Enthusiasts can gather to collaborate, brainstorm, and learn about classic cocktails and variations on which. Signup for an account and start searching for your favorite cocktails, adapt them to your needs, and explore new variations. Happy mixing!
+Kraterologist is a cocktail application where Bartenders, Bar Managers, Restaurateurs, Aficionados, and Enthusiasts can gather to collaborate, brainstorm, and learn about classic cocktails and variations on which. Signup for an account and start searching for your favorite cocktails, adapt them to your needs, and explore new variations. 
 
 Kraterologist was created in a single six day solo sprint. The idea came from my 15 year career in hospitality. Bartenders and restaurateurs are constantly struggling to develop unique and expressive cocktails for their seasonal menus. Kraterologist aids in that development by offering suggestions and allowing the user to modify classic cocktails. Kraterology comes from the old greek words for the study of (ology) mixing liquid in a vessel called a krater.
 

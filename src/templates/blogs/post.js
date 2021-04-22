@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import { Calendar, Clock } from 'react-feather'
+import { Calendar } from 'react-feather'
 
 import { Intro, Title, ArticlePost, SmallText, ArticleBody, NaviagtionList, NaviagtionLi } from '../../components/styled/posts'
 import { ContainerLayout } from '../../components/common'
@@ -31,10 +31,7 @@ const BlogPost = ({ data, pageContext, location }) => {
                   <Calendar className="align-middle text-primary" width="18" height="18" />
                   <span className="align-middle"> date published : {post.frontmatter.date} </span>
                 </SmallText>
-                {/* <SmallText> 
-                    <Clock className="align-middle text-primary" width="18" height="18" /> 
-                    <span className="align-middle"> read time : {post.frontmatter.time} mins </span>
-                  </SmallText> */}
+
               </header>
 
               <ArticleBody dangerouslySetInnerHTML={{ __html: post.html }} />

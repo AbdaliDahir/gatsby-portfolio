@@ -1,14 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { graphql } from "gatsby"
 import IMG_0288 from "../assets/img/IMG_0288.jpg"
-import { Tag, ContainerLayout, WorkPost, Category, Intro, SubTitle, Title, Text, ResumeButton } from "../components/common"
+import { ContainerLayout, Intro, SubTitle, ResumeButton } from "../components/common"
 import DevIcon from "devicon-react-svg";
 
 const WorkIndex = ({ data }) => {
-  const works = data.allMarkdownRemark.edges
+  // const works = data.allMarkdownRemark.edges
 
   return (
     <>

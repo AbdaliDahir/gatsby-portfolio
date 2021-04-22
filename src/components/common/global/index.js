@@ -56,6 +56,72 @@ export const GlobalStyle = createGlobalStyle`
     sup {
       top: -0.5em;
     }
+    .brandStatement{
+      font-size: 20px;
+      // box-shadow: 10px 5px 5px blue;
+    }
+    .empBullet{
+      font-size: 20px;
+    }
+    .education{
+      float: left;
+      // margin: 0 1.5%;
+      width: 30%;
+    }
+    .hardSkills {
+      float: left;
+      // margin: 0 1.5%;
+      width: 30%;
+    }
+    .devicon{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+    .meAndKids{
+      // float: right;
+      margin: 2% 3%;
+      // width: 30%;
+      border-radius: 10px;
+      box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.15);
+      // width: 100%;
+    }
+    .content_img{
+      position: relative;
+      // width: 200px;
+      // height: 200px;
+      float: left;
+      margin-right: 10px;
+    }
+
+    .content_img div{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: black;
+      color: white;
+      margin-bottom: 5px;
+      font-family: sans-serif;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: visibility 0s, opacity 0.5s linear; 
+      transition: visibility 0s, opacity 0.5s linear;
+    }
+
+    .content_img:hover{
+      cursor: pointer;
+    }
+
+    .content_img:hover div{
+      // width: 150px;
+      padding: 8px 15px;
+      visibility: visible;
+      opacity: 0.9; 
+      font-size: 20px;
+      text-align: center;
+    }
+
     img {
       border-style: none;
     }

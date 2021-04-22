@@ -1,10 +1,10 @@
 import React from 'react'
-import {Text} from "../../../styled/repository"
+import { Text } from "../../../styled/repository"
 
 export const RepositoryDescription = ({ repo }) => (
   <div>
     <Text>
-      {repo.description || "this repo didn't have any description"}
+      {repo.description || "this repo didn't have a description"}
 
       {repo.homepageUrl && (
         <>
@@ -13,4 +13,4 @@ export const RepositoryDescription = ({ repo }) => (
       )}
     </Text>
   </div>
-) 
+)

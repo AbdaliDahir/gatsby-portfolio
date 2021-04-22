@@ -10,8 +10,19 @@ export const AboutSection = styled.section`
     grid-gap: 10rem;
     text-align: left;
   }
+  .devicon {
+    text-align: center;
+    padding: 10px;
+    
+  }
 `
-export const Avatar =styled(Img)`
+
+// export const devIconStyle = styled(DevIcon)`
+//   fill: "thistle",
+//   width: "150px",
+// ;
+// `
+export const Avatar = styled(Img)`
   border-radius: 5px;
   box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.15);
   width: 100%;
@@ -28,12 +39,13 @@ export const Text = styled.p`
   font-size: 1.2rem;
   line-height: 2;
   color: #232323;
-  text-transform: capitalize;
+  // text-transform: capitalize;
   a {
     color: #3F51B5;
     text-decoration: underline;
   }
 `
+
 export const SubTitle = styled.h2`
   font-family: "GT-Walsheim-Pro-Medium";
   margin-top: 3rem;

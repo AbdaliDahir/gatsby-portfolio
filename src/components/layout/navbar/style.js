@@ -21,6 +21,7 @@ export const NavbarElement = styled.div`
     text-align: center;
     width: 100%;
   }
+  
 `
 
 export const NavbarList = styled.ul`

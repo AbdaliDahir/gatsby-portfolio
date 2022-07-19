@@ -22,14 +22,15 @@ const About = () => {
           <AboutSection>
             <div>
               <Avatar fluid={data.placeholderImage.childImageSharp.fluid} alt="user photo" />
-              <SubTitle> Front End Developer</SubTitle>
+              <SubTitle> Full-Stack Engineer </SubTitle>
             </div> 
             <div>
-              <Title> Hello, I’m AbdAli </Title>
-              <Text> I'm a digital Front End Developer hailing from <b className="text-primary lined-link">North Africa</b> living in Casablanca. </Text>
-              <Text> I love working with modern technologies, building and designing awesome projects. I prefer minimalistic & clean designs with strong user experience.</Text>
-              <Text> behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.
-              </Text>
+              <Title> Hello, I’m Abdelali </Title>
+              <Text> Full-Stack Engineer from <b className="text-primary lined-link">Morocco</b> </Text>
+              <Text>  Four years experienced Software Engineer who combines high-level problem solving skills with good technical experience in Java, Spring framework, React,  Relational Database and multitude of NoSQL DBs. engineering professional with a bachelor degree in Computer Engineering.
+              </Text> 
+              <Text> working with multi agencies on multi projects allowed me to better understand the expectations of clients and the needs of team members.</Text>
+              <Text>  The Only Thing I Know , is that i really know Nothing at all. </Text>
               <ResumeButton href="resume.pdf" target="_blank"> Download resume </ResumeButton>
             </div>
           </AboutSection>

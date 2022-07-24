@@ -14,7 +14,8 @@ export const HeaderIntro = styled.header`
 `
 export const Title = styled.h1`
   font-family: "GT-Walsheim-Pro-Bold";
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin: .5rem auto;
   text-transform: capitalize;
   @media(max-width: ${variables.breakpointPhone}) {
     font-size: 1.5rem;
@@ -27,10 +28,10 @@ export const SubTitle = styled.h3`
   text-decoration: underline;
 `
 export const Text = styled.p`
-  font-size: .98rem;
+  font-size: .88rem;
   line-height: 2;
-  color: #000000;
-  margin-top: 2rem;
+  color: #605f5f;
+  margin-top: 1rem;
   text-align: justify;
   @media(max-width: ${variables.breakpointPhone}) {
     margin-top: 1rem;
@@ -44,10 +45,13 @@ export const SubText = styled.p`
 `
 
 export const SmallText = styled.small`
-  font-size: .89rem;
+  font-size: .79rem;
   padding-right: 10px;
   > span {
     padding-left: 5px;
+  }
+  > a {
+    color: #c4c6c7
   }
   @media(max-width: ${variables.breakpointPhone}) {
     font-size: .6rem;
@@ -56,9 +60,10 @@ export const SmallText = styled.small`
 
 export const WorkPost = styled.article`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 3fr;
   align-items: center;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px dotted #e9e9e9;
   @media(max-width: ${variables.breakpointPhone}) {
     grid-template-columns: 1fr;
     border: 10px solid #fff;
@@ -75,7 +80,7 @@ export const WorkPost = styled.article`
     text-align: center;
     > .image-wrapper {
       margin-bottom: .5rem;
-      max-height: 400px;
+      max-height: 200px;
       overflow: hidden;
       @media(min-width: ${variables.breakpointPhone}) {
         border: 10px solid #fff;

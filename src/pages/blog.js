@@ -39,10 +39,9 @@ const BlogIndex = ({ data }) => {
                           <Img fluid={node.frontmatter.image.childImageSharp.fluid} title="work title" />
                         </Link> 
                       </div>
-                      <SmallText>
-                        Image Credits : 
+                      <SmallText> 
                         <UnderLink href={node.frontmatter.imageCredit} target="_blank" title="image credit">
-                          {node.frontmatter.imageCredit}
+                          Image Credit
                         </UnderLink>
                       </SmallText>
                     </div>

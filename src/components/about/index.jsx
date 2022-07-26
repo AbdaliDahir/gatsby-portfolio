@@ -53,7 +53,6 @@ const motionForce = (x, y) => {
 
 const src = "about.jpg";
 
-
 const About = () => {
   const data = useStaticQuery(graphql`
     query {

@@ -31,6 +31,7 @@
     "react-github-btn": "^1.2.0",
     "react-github-button": "^0.1.11",
     "react-helmet": "^6.1.0",
+    "react-particle-image": "^1.0.2",
     "sharp": "^0.30.5",
     "styled-components": "^5.1.1"
   },

@@ -84,7 +84,8 @@ const About = () => {
                 touchMoveForce={motionForce}
                 backgroundColor={STEP}
               />
-              <SubTitle> Full-Stack Engineer </SubTitle>
+              <SubTitle> Full Stack Engineer. </SubTitle>
+              
             </div> 
             <div>
               <Title> Hello, I’m Abdelali </Title>

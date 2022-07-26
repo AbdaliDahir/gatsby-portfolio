@@ -54,17 +54,17 @@ const motionForce = (x, y) => {
 const src = "about.jpg";
 
 const About = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "54db13f1deef6bf15ce17127aa98eb33.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 550) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     placeholderImage: file(relativePath: { eq: "54db13f1deef6bf15ce17127aa98eb33.png" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 550) {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
   return (
     <>
       <SectionIntro>

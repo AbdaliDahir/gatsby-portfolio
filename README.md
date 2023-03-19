@@ -17,7 +17,6 @@ creative personal & portfolio template based on gatsby. designed so you can show
     Use the Gatsby CLI to create a new site, specifying the default starter.
 
     ```shell
-    # create a new Gatsby site using the default starter
     git clone https://github.com/AbdaliDahir/gatsby-portfolio.git
     ```
 
@@ -27,12 +26,17 @@ creative personal & portfolio template based on gatsby. designed so you can show
 
     ```shell
     cd gatsby-portfolio/
+    ```
+
+    ```shell
     npm install
     ```
 
     Set up environment.
     ```shell
     cp .env.example .env.development
+    ```
+    ```shell
     vi .env.development
     ```
     Open the file `.env.development` and paste your personal GitHub access token in it.

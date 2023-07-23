@@ -3,10 +3,10 @@ import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import { Calendar, Clock } from 'react-feather'
 import Img from "gatsby-image"
-import CategoriesTags from '../../components/CategoriesTags/categoriesTags';
-import {ContainerLayout, WorkPost, Intro, SubTitle, Title, Text, HeaderIntro, SubText, SmallText, UnderLink, ReadMore} from "../../components/common"
+import {ContainerLayout, WorkPost, Intro, Title, Text, SmallText, UnderLink, ReadMore} from "../../components/common"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
+import BlogHeader from "../../components/layout/BlogHeader"
 
 const Categories = ({ data }) => {
   const { edges} = data.allMarkdownRemark
@@ -20,15 +20,7 @@ const Categories = ({ data }) => {
       <Intro>
         <ContainerLayout>
 
-          <SubTitle>
-            Articles
-          </SubTitle>
-          <HeaderIntro>
-            <SubText>
-              Articles on front-end design engineering, focused on HTML, CSS, SVG, accessiblity, and everything in between, with practical tips from real projects. Included here are links to articles published on magazines.
-            </SubText>
-            <CategoriesTags /> 
-          </HeaderIntro>
+          <BlogHeader />
 
           <ContainerLayout className="wrapper">
             {edges.map(({ node }) => {

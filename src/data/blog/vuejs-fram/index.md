@@ -4,7 +4,7 @@ date: "2019-11-06T23:46:37.121Z"
 image: './vuejs.webp'
 imageCredit: https://dribbble.com/shots/13973611-Smile
 time: 12
-categories: ['javascript', 'vuejs', 'comparison', 'frameworks', 'web development']
+categories: ['javascript', 'vuejs']
 description: "Vue.js, Nuxt.js, Vuepress.js, and Gridsome.js are all JavaScript frameworks that can be used to build web applications. However, they have different strengths and weaknesses, and they are suited for different types of projects."  
 ---
 

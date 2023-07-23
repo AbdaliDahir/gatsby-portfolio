@@ -4,9 +4,9 @@ import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 import { Calendar, Clock } from 'react-feather'
 import Img from "gatsby-image"
-import {ContainerLayout, WorkPost, Intro, SubTitle, Title, Text, HeaderIntro, SubText, SmallText, UnderLink, ReadMore} from "../components/common"
-import CategoriesTags from '../components/CategoriesTags/categoriesTags';
+import {ContainerLayout, WorkPost, Intro, Title, Text, SmallText, UnderLink, ReadMore} from "../components/common"
 import kebabCase from "lodash/kebabCase"
+import BlogHeader from "../components/layout/BlogHeader"
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
@@ -18,17 +18,7 @@ const BlogIndex = ({ data }) => {
         <Intro>
           <ContainerLayout>
 
-            <SubTitle>
-              Articles
-            </SubTitle>
-            <HeaderIntro>
-                <SubText>
-                  Posts that prioritize providing information through straightforward explanations.
-                  <br/>
-                  Simple can be harder than complex.
-                </SubText>
-              <CategoriesTags /> 
-            </HeaderIntro>
+            <BlogHeader />
 
             <ContainerLayout className="wrapper">
                 {posts.map(({ node }) => {

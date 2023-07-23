@@ -22,10 +22,10 @@ export const Title = styled.h1`
   }
 `
 export const SubTitle = styled.h3`
-  font-size: 2rem;
+  font-size: 1rem;
   text-transform: capitalize;
   font-family: "GT-Walsheim-Pro-Bold";
-  text-decoration: underline;
+  line-height: 1.6rem;
 `
 export const Text = styled.p`
   font-size: .88rem;
@@ -99,6 +99,8 @@ export const WorkPost = styled.article`
     }
   }
 `
+
+
 export const Category = styled.span`
   font-family: "GT-Walsheim-Pro-Bold";
   color: ${variables.primary};
